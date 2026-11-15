@@ -1,0 +1,25 @@
+inherits: universal
+case: 2608-lakewood-council
+case_id: INV-2026-001
+evidence_prefix: E
+
+blocked_surfaces_add: [renton, ss911, pdc]
+
+entities:
+  - {name: Philip Lindholm, type: person, aliases: [Lindholm, Phil Lindholm]}
+  - {name: Paul Bocchi, type: person, aliases: [Bocchi]}
+  - {name: Patti Belle, type: person, aliases: [Belle]}
+  - {name: Ellen Talbo, type: person, aliases: [Talbo]}
+  - {name: Ryan Pearson, type: person, aliases: [Pearson]}
+  - {name: Mike Brandstetter, type: person, aliases: [Brandstetter]}
+  - {name: Trestin Lauricella, type: person, aliases: [Lauricella, J. Trestin Lauricella]}
+  - {name: Terry Wise, type: person, aliases: [Wise]}
+  - {name: Concord Counsel, type: organization}
+  - {name: Terry Wise & Associates, type: organization, aliases: [Terry Wise and Associates, Terry Wise Real Estate]}
+  - {name: South Sound 911, type: government_body}
+  - {name: Lakewood City Council, type: government_body}
+  - {name: Pierce County Council, type: government_body}
+
+claims:
+  predicates: [vote, abstain, employ, own, donate, represent, file, disclose, adopt, second]
+  evidence_pattern: "\\bE\\d{3}\\b"

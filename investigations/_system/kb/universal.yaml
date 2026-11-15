@@ -1,0 +1,68 @@
+version: 1
+# Universal defaults. Every project inherits these and may override scalars,
+# extend lists, and add entities. Nothing here is case-specific.
+
+ids:
+  entity: "ENT-{hash8}"
+  claim: "CLM-{hash10}"
+
+thresholds:
+  exact: 1.00
+  normalized: 0.98
+  acronym: 0.95
+  fuzzy_accept: 0.90
+  fuzzy_review: 0.82
+  embedding_accept: 0.86
+  embedding_review: 0.78
+
+entity_types: [person, organization, government_body, location, legislation, property, event, role]
+
+# Words that appear in every paragraph. Linking them adds brackets, not knowledge.
+blocked_surfaces:
+  - lakewood
+  - washington
+  - pierce
+  - tacoma
+  - kent
+  - council
+  - county
+  - city
+  - state
+  - court
+  - board
+  - commission
+  - chamber
+  - office
+  - department
+  - party
+  - html
+  - json
+  - csv
+  - api
+  - pdf
+  - tesseract
+  - hermes
+  - claude
+  - gliner
+  - spacy
+
+claims:
+  require_evidence: true
+  evidence_pattern: "\\bE\\d{3}\\b"
+  grades: [two_anchors, primary_plus_secondary, single_source, contradicted, unstated]
+  max_sentence_chars: 400
+
+linking:
+  per_note_budget: 6
+  per_target: 1
+  skip_headings: true
+  skip_tables: true
+  skip_code: true
+
+contribution:
+  required_frontmatter: [project, type, status, created]
+  require_case: true
+  inbox: Investigations/_inbox
+  ledger: Investigations/_system/data/ledger.jsonl
+  registry: Investigations/_system/data/entity-registry.json
+  claims_store: Investigations/_system/data/claims.jsonl

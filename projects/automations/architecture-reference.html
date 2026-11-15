@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Architecture Reference</title><meta charset="utf-8"/><link rel="preload" href="../../index-64dfc6b1.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 5"/><meta property="og:title" content="Architecture Reference"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Architecture Reference"/><meta name="twitter:description" content="**Reference documentation for multi-agent system design patterns.** This page contains **theoretical patterns and schemas for future systems**, not current runtime behavior."/><meta property="og:description" content="**Reference documentation for multi-agent system design patterns.** This page contains **theoretical patterns and schemas for future systems**, not current runtime behavior."/><meta property="og:image:alt" content="**Reference documentation for multi-agent system design patterns.** This page contains **theoretical patterns and schemas for future systems**, not current runtime behavior."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/projects/automations/architecture-reference"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/projects/automations/architecture-reference"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="**Reference documentation for multi-agent system design patterns.** This page contains **theoretical patterns and schemas for future systems**, not current runtime behavior."/><meta name="generator" content="Quartz"/><link href="../../index-64dfc6b1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-b43df3ac.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-9406c2cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-02d2a92c.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-0be4fa7f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d2eefd3a.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a71023bb.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-89d3cd78.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json() }).catch(e => { console.warn("[Quartz] Could not load ../../static/contentIndex.json (" + e.message + "); is configuration.contentIndex disabled?"); return {} });window.quartzStaticUrl = new URL("../../static/", location.href).href</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/projects/automations/architecture-reference-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/projects/automations/architecture-reference-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/projects/automations/architecture-reference-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="projects/automations/architecture-reference" data-basepath><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar" data-sidebar-mode="fit"><h2 class="page-title" data-quartz-plugin="page-title" data-quartz-component="PageTitle"><a href="../..">Quartz 5</a></h2><div class="mobile-only"><div class="spacer" data-quartz-plugin="spacer" data-quartz-component="Spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search" data-quartz-plugin="search" data-quartz-component="Search"><button class="search-button" aria-label="Search" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something..." placeholder="Search for something..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Dark mode" data-quartz-plugin="darkmode" data-quartz-component="Darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Reader mode" data-quartz-plugin="reader-mode" data-quartz-component="ReaderMode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a, b) => {\n    if (!a.isFolder &amp;&amp; !b.isFolder || a.isFolder &amp;&amp; b.isFolder) {\n      return (a.displayName || \&quot;\&quot;).localeCompare(b.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a.isFolder &amp;&amp; b.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}" data-quartz-plugin="explorer" data-quartz-component="Explorer"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-529" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-529" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs" data-quartz-plugin="breadcrumbs" data-quartz-component="Breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/">Projects</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/automations/">automations</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Architecture Reference</a></div></nav><h1 class="article-title" data-quartz-plugin="article-title" data-quartz-component="ArticleTitle">Architecture Reference</h1><p show-comma="true" class="content-meta" data-quartz-plugin="content-meta" data-quartz-component="ContentMeta"><time datetime="2026-11-13T08:00:00.000Z">Nov 13, 2026</time><span>11 min read</span></p></div></div><article class="popover-hint" data-quartz-plugin="content-page" data-quartz-component="ContentPage"><div class="markdown-preview-view markdown-rendered"><callout icon="📚" color="blue_bg">
+	**Reference documentation for multi-agent system design patterns.**
+	This page contains **theoretical patterns and schemas for future systems**, not current runtime behavior. The actual system is a single reasoning loop that loads instruction sets on demand.
+	For how the system actually works, see <mention-page url="https://app.notion.com/p/2ecef56cb23c8062ba37e9c58c25929f">Meta-Agent Master Prompt</mention-page>.
+</callout>
+<callout icon="⚠️" color="yellow_bg">
+	### 🚧 Historical Context
+	This document was written when the architecture aspired to true multi-agent orchestration. The current implementation is simpler and more honest: **one reasoning loop, multiple instruction sets**.
+	Keep this doc for:
+	- Design pattern reference if building more complex systems later
+	- Understanding the evolution of the architecture
+	- Concepts that still apply (memory via pages, context via sync blocks)
+</callout>
+---
+## 🏠️ Orchestration Topologies
+<columns>
+	<column>
+		<callout icon="🔀" color="blue_bg">
+			### Router Pattern
+			**When to use:** Task requires dynamic dispatch based on input classification
+			```javascript
+🎯 Router Agent
+├── Classifies incoming request
+├── Routes to specialist agent
+└── Collects and returns result
+			```
+			**Notion Implementation:**
+			- Router page with classification logic in System Prompt
+			- Specialist agents as child pages
+			- State Machine with branching transitions
+			- Single sync block from Router → all specialists
+		</callout>
+		<callout icon="📝" color="green_bg">
+			### Planner Pattern
+			**When to use:** Complex tasks requiring decomposition and sequencing
+			```javascript
+📝 Planner Agent
+├── Decomposes goal into subtasks
+├── Creates execution plan
+├── Assigns to executor agents
+└── Monitors completion
+			```
+			**Notion Implementation:**
+			- Planner creates task entries in Execution Log
+			- Each subtask becomes a State in State Machine
+			- Executor agents subscribe via sync blocks
+			- Plan stored in Agent Memory (Long-term)
+		</callout>
+	</column>
+	<column>
+		<callout icon="🏗️" color="purple_bg">
+			### Hierarchical Pattern
+			**When to use:** Tasks with natural parent-child decomposition
+			```javascript
+👑 Supervisor Agent
+├── 👷 Manager A
+│   ├── 🧑‍💻 Worker A1
+│   └── 🧑‍💻 Worker A2
+└── 👷 Manager B
+    ├── 🧑‍💻 Worker B1
+    └── 🧑‍💻 Worker B2
+			```
+			**Notion Implementation:**
+			- Nested page structure mirrors hierarchy
+			- Parent sync blocks cascade to children
+			- Each level has filtered database views
+			- Dependencies relation creates the tree
+		</callout>
+		<callout icon="🐝" color="orange_bg">
+			### Swarm Pattern
+			**When to use:** Embarrassingly parallel tasks, consensus building
+			```javascript
+🐝 Swarm Coordinator
+├── 🐜 Agent 1 (parallel)
+├── 🐜 Agent 2 (parallel)
+├── 🐜 Agent 3 (parallel)
+└── 🪹 Aggregator (waits for all)
+			```
+			**Notion Implementation:**
+			- Coordinator spawns parallel State entries
+			- All swarm agents share same input sync block
+			- Each writes to individual output sync block
+			- Aggregator embeds ALL output sync blocks
+			- Forward trigger: All swarm agents complete
+		</callout>
+	</column>
+</columns>
+---
+## 🧠 Advanced Memory Architecture
+<callout icon="🗃️" color="purple_bg">
+	### Multi-Tier Memory System
+	Implement cognitive-inspired memory layers using Notion's native structures:
+	<div class="table-container"><table header-row="true"><tbody><tr><td>Memory Tier</td><td>Notion Implementation</td><td>Persistence</td><td>Access Pattern</td><td>**Working Memory**</td><td>Toggle block on Agent Page</td><td>Single execution</td><td>Direct read/write</td></tr><tr><td>**Episodic Memory**</td><td>Execution Log entries + page content snapshots</td><td>Per workflow</td><td>Query by Workflow ID</td><td>**Semantic Memory**</td><td>Agent Memory DB with `Long-term` type + Tags</td><td>Permanent</td><td>Search by Tags, Relevance Score</td></tr><tr><td>**Procedural Memory**</td><td>System Prompt callouts + State Instructions</td><td>Permanent</td><td>Loaded at agent invocation</td><td>**Shared Memory**</td><td>Sync blocks embedded across agents</td><td>Real-time</td><td>Automatic propagation</td></tr></tbody></table></div>
+</callout>
+<columns>
+	<column>
+		<callout icon="🔍" color="yellow_bg">
+			### Memory Retrieval Strategy
+			**Recency-Weighted Retrieval:**
+			1. Query Agent Memory by `Agent` relation
+			2. Filter by `Memory Type` and `Tags`
+			3. Sort by `Relevance Score` DESC, `Timestamp` DESC
+			4. Take top N results
+			5. Inject into Input Buffer
+		</callout>
+	</column>
+	<column>
+		<callout icon="🧹" color="gray_bg">
+			### Memory Consolidation
+			**End-of-Workflow Protocol:**
+			1. Archive `Short-term` memories (delete or move)
+			2. Promote important `Episodic` → `Long-term`
+			3. Update `Relevance Score` based on usage
+			4. Merge duplicate memories
+			5. Prune low-relevance entries older than 30 days
+		</callout>
+	</column>
+</columns>
+---
+## 🔁 Reflection &amp; Self-Correction Loops
+<columns>
+	<column>
+		<callout icon="🔎" color="blue_bg">
+			### Critic Agent Pattern
+			**Purpose:** Evaluate outputs before forwarding
+			1. Add `Validation` state type after each `Processing` state
+			2. Critic Agent reviews Output Buffer
+			3. Writes critique to Working Memory
+			4. Decides: Forward (pass) or Stay (fail + feedback)
+		</callout>
+	</column>
+	<column>
+		<callout icon="🧬" color="green_bg">
+			### Self-Reflection Protocol
+			**Purpose:** Agent evaluates its own performance
+			- Add `Confidence` select property to Execution Log
+			- Low confidence triggers automatic Stay transition
+			- Reflection notes stored in Working Memory toggle
+		</callout>
+	</column>
+</columns>
+---
+## 🛠️ Tool Augmentation Framework
+<callout icon="🧰" color="blue_bg">
+	### Strategic Tool Assignment
+	Match Notion AI tools to agent responsibilities:
+	<div class="table-container"><table header-row="true"><tbody><tr><td>Agent Role</td><td>Primary Tools</td><td>Secondary Tools</td><td>Never Assign</td><td>**Coordinator / Planner**</td><td>`search`, `view`, `query-db`</td><td>`create-page`, `update-page`</td><td>`delete-page`</td></tr><tr><td>**Researcher / Scanner**</td><td>`search`, `view`</td><td>`query-db`</td><td>`create-db`, `delete-page`</td><td>**Writer / Creator**</td><td>`create-page`, `update-page`</td><td>`view`</td><td>`delete-page`, `update-db`</td></tr><tr><td>**Analyst**</td><td>`query-db`, `view`</td><td>`update-page`</td><td>`create-db`, `delete-page`</td><td>**Builder / Architect**</td><td>`create-db`, `update-db`, `create-page`</td><td>`query-db`</td><td>—</td></tr><tr><td>**Reviewer / Validator**</td><td>`view`, `query-db`</td><td>`update-page` (for annotations)</td><td>`create-db`, `delete-page`</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</callout>
+---
+## 📡 Inter-Agent Communication Protocols
+<columns>
+	<column>
+		<callout icon="📬" color="purple_bg">
+			### Message Passing (Point-to-Point)
+			**When:** Direct handoff between two agents
+			- Agent A writes to Output Buffer
+			- State transition triggers
+			- Agent B reads from Input Buffer
+		</callout>
+		<callout icon="📢" color="orange_bg">
+			### Pub/Sub (Event-Driven)
+			**When:** Agents react to events, not direct calls
+			- Publisher writes to its sync block
+			- Subscriber agents embed that sync block
+			- `Listeners` relation in Agent Registry
+		</callout>
+	</column>
+	<column>
+		<callout icon="📋" color="green_bg">
+			### Blackboard (Shared State)
+			**When:** Multiple agents read/write shared context
+			- Global Context sync block = blackboard
+			- All agents embed the same sync block
+			- Writes propagate automatically
+		</callout>
+		<callout icon="📊" color="blue_bg">
+			### Database-Mediated (Queue)
+			**When:** Ordered processing, work queues
+			- Create &quot;Task Queue&quot; database
+			- Producer agents create entries
+			- Consumer agents query for unprocessed
+		</callout>
+	</column>
+</columns>
+---
+## 🎯 OABG Stack: Consolidated Architecture
+<callout icon="🎯" color="green_bg">
+	### The 4-Agent Core
+	**OABG = Orchestrator + Analyzer + Builder + Guardian**
+	This is the minimal viable architecture for a self-evolving agentic system.
+</callout>
+```javascript
+┌─────────────────────────────────────────────────────────────┐
+│              🧬 EVOLUTION PROTOCOL (Wrapper)                │
+│    Triggers ONLY when self-modification is detected         │
+│    Enforces: Pre-check → Change → Post-validate → Log       │
+└─────────────────────────────────────────────────────────────┘
+                              │
+       ┌──────────────────────┼──────────────────────┐
+       ▼                      ▼                      ▼
+┌─────────────┐      ┌─────────────────┐      ┌────────────┐
+│ 🎛️ ORCHES- │◄────►│ 🔍 ANALYZER     │◄────►│ 🏗️ BUILDER │
+│   TRATOR    │      │ (Gap + Quality) │      │            │
+└─────────────┘      └─────────────────┘      └────────────┘
+       │                      │                      │
+       └──────────────────────┼──────────────────────┘
+                              ▼
+                     ┌─────────────┐
+                     │ 🛡️ GUARDIAN │
+                     │ (Safety Gate)│
+                     └─────────────┘
+```
+<div class="table-container"><table fit-page-width="true" header-row="true"><tbody><tr><td>**Agent**</td><td>**Role**</td><td>**Absorbs**</td><td>**Primary Tools**</td></tr><tr><td>🎛️ **Orchestrator**</td><td>Intake, optimize prompts (COSTAR/CoT), plan, coordinate, route</td><td>Prompt Engineer, Planner, Router, Meta-Orchestrator</td><td>`search`, `view`, `query-data-sources`</td></tr><tr><td>🔍 **Analyzer**</td><td>Research, gap-check against Registry, quality validation, critique</td><td>Researcher, Gap Analyst, Quality Agent, Evaluator, Tester, Debugger</td><td>`search`, `view`, `query-data-sources`</td></tr><tr><td>🏗️ **Builder**</td><td>Create agents, pages, databases, execute changes</td><td>Agent Factory, Writer, Creator, Executor, Deployment Assistant</td><td>`create-pages`, `update-page-v2`, `create-database`, `update-database`</td></tr><tr><td>🛡️ **Guardian**</td><td>Pre/post safety gates, enforce protocols, block forbidden ops</td><td>Safety Agent, Security Agent, Policy/Guardrail Agent</td><td>`view`, `query-data-sources`</td></tr></tbody></table></div>
+<callout icon="⚡" color="orange_bg">
+	### Maximum Compute Strategy
+	<div class="table-container"><table header-row="true"><tbody><tr><td>Technique</td><td>Implementation</td></tr><tr><td>**Parallel tool calls**</td><td>Batch independent ops: `search` + `view` + `query` simultaneously</td></tr><tr><td>**Exhaustive search**</td><td>Web RAG + internal + connector searches in parallel</td></tr><tr><td>**Deep Chain-of-Thought**</td><td>Orchestrator reasons through multiple paths before committing</td></tr><tr><td>**Multi-pass refinement**</td><td>Analyzer loops back to Builder up to 3× per output</td></tr><tr><td>**Full context loading**</td><td>View ALL relevant pages before acting (max working memory)</td></tr></tbody></table></div>
+</callout>
+---
+## 🏗️ Notion-Native Multi-Agent Architecture
+<columns>
+	<column>
+		<callout icon="🧬" color="purple_bg">
+			### Core Philosophy
+			**Notion IS the agent runtime.** Every page, database, and block serves a purpose:
+			- **Pages** → Agent definitions, workspaces, outputs
+			- **Databases** → State machines, memory stores, execution logs
+			- **Sync Blocks** → Shared context, cross-agent memory
+			- **Nested Pages** → Hierarchical agent systems
+			- **Callouts** → System prompts, instructions, constraints
+			- **Toggles** → Collapsible agent logic &amp; conditional paths
+			- **Tables** → Structured data exchange between agents
+		</callout>
+	</column>
+	<column>
+		<callout icon="🎯" color="green_bg">
+			### Design Imperatives
+			1. **Build artifacts, not just plans**
+			2. **Agents have addresses** — Each agent lives at a specific page URL
+			3. **Memory is persistent** — Use databases for durable agent memory
+			4. **Context flows through sync blocks**
+			5. **State is observable** — All transitions logged
+			6. **Errors create artifacts** — Failures produce debuggable records
+		</callout>
+	</column>
+</columns>
+---
+## 📐 System Architecture Blueprint
+<callout icon="🏠" color="gray_bg">
+	### Recommended Folder Structure
+	```javascript
+🤖 Multi-Agent System: [Project Name]
+├── 📋 System Overview (this page)
+├── 🔄 Shared Context (sync block source)
+├── 🗄️ Databases/
+│   ├── 🎭 Agent Registry
+│   ├── 📊 State Machine
+│   ├── 🧠 Agent Memory Store
+│   └── 📝 Execution Log
+└── 🤖 Agents/
+    ├── Agent 1: [Name]
+    ├── Agent 2: [Name]
+    └── Agent N: [Name]
+	```
+</callout>
+---
+## 🛡️ Safe Modification Protocol
+<callout icon="⚠️" color="red_bg">
+	### CRITICAL: Protecting Undo Capability
+	**Before ANY self-modification, these safeguards MUST be followed.**
+</callout>
+<columns>
+	<column>
+		<callout icon="📸" color="blue_bg">
+			### 1. Pre-Change Protocol
+			**Before modifying architecture:**
+			1. **Timestamp** — Note current time (version anchor)
+			2. **Scope** — List exactly what will change
+			3. **Rationale** — Why this change is needed
+			4. **Rollback plan** — How to undo if needed
+			*Notion auto-saves versions every 2-10 min during edits*
+		</callout>
+		<callout icon="🚫" color="red_bg">
+			### 3. Forbidden Operations
+			**NEVER do these without explicit user approval:**
+			- Delete agents from Registry
+			- Modify Master Prompt core sections
+			- Change Agent Router routing logic
+			- Remove safety protocols
+			- Batch-delete pages
+		</callout>
+	</column>
+	<column>
+		<callout icon="✅" color="green_bg">
+			### 2. Post-Change Validation
+			**After ANY modification:**
+			1. **Query Registry** — Core agents still exist?
+			2. **Check Router** — Routing table intact?
+			3. **Verify links** — No broken references?
+			4. **Test invocation** — Can you still respond?
+			*If validation fails → immediate rollback*
+		</callout>
+		<callout icon="🔄" color="yellow_bg">
+			### 4. Rollback Procedure
+			**If something breaks:**
+			1. Open affected page
+			2. Click ••• → Page history
+			3. Find version before change
+			4. Click &quot;Restore&quot;
+			*User can always manually restore via Notion UI*
+		</callout>
+	</column>
+</columns>
+<callout icon="📋" color="purple_bg">
+	### Safe Operations (No approval needed)
+	- ✅ **Add** new agents to Registry (Status: Planned)
+	- ✅ **Create** new pages under existing structure
+	- ✅ **Archive** agents (Status: Archived) instead of deleting
+	- ✅ **Add** new sections to documentation
+	- ✅ **Query** any database or page
+</callout>
+---
+## 🚧 Error Handling Architecture
+<columns>
+	<column>
+		<callout icon="↻" color="yellow_bg">
+			### NULL-TRANSITION (Stay)
+			**When:** Output incomplete, format mismatch, validation failed
+			1. Increment `Current Retries` in State Machine
+			2. Log error details
+			3. Append feedback to Input Buffer
+			4. Re-execute same agent
+			5. If retries \> Max Retries → escalate to Traceback
+		</callout>
+		<callout icon="←" color="orange_bg">
+			### TRACEBACK (Recovery)
+			**When:** Prerequisites missing, dependency not met
+			1. Identify `Previous State` from State Machine
+			2. Load previous agent with error context
+			3. Max traceback depth: 2 states
+		</callout>
+	</column>
+	<column>
+		<callout icon="✗" color="red_bg">
+			### FAILURE (Terminal)
+			**When:** Max retries exceeded, circular loop detected
+			1. Log `Error` action with full context
+			2. Set agent Status to `Error`
+			3. Create error summary page
+			4. Request human intervention
+		</callout>
+		<callout icon="🛡️" color="gray_bg">
+			### Circuit Breaker
+			**Per Agent:** If `Error Count` \> 5 in 24 hours → auto-pause
+			**Per Workflow:** If total errors \> 10 → terminate workflow
+		</callout>
+	</column>
+</columns>
+---
+## ⚡ Execution Protocol
+<callout icon="▶️" color="orange_bg">
+	### Step-by-Step Execution
+	**1. INITIALIZE** — Create workflow entry, load global context, identify initial state
+	**2. EXECUTE STATE** — Log entry, read System Prompt, execute agent logic, write to Output Buffer
+	**3. EVALUATE TRANSITION** — Check Forward/Stay/Traceback/Fail triggers
+	**4. PROPAGATE** — Write output to sync block, update Agent Memory
+	**5. TRANSITION** — Load next state, clear/write buffers, repeat from step 2
+	**6. TERMINATE** — Log final state, archive memories, update status
+</callout>
+---
+## 🔄 Evolution Layer Protocol
+<callout icon="🧬" color="purple_bg">
+	### Self-Modification Architecture
+	**Purpose:** Enable the agent system to safely evolve its own capabilities while preserving undo functionality.
+	**Core Principle:** Evolution is a *protocol*, not an agent—it's a coordination pattern the Orchestrator triggers when self-modification is detected.
+</callout>
+### When Evolution Triggers
+```javascript
+Orchestrator receives prompt
+    │
+    ├─ Optimize prompt (COSTAR/CoT)
+    ├─ Analyzer: Gap check against Registry
+    │
+    └─ IF gaps detected OR architecture change requested:
+         └─ TRIGGER Evolution Layer
+```
+### Evolution Execution Sequence
+<div class="table-container"><table fit-page-width="true" header-row="true"><tbody><tr><td>**Step**</td><td>**Agent**</td><td>**Action**</td><td>**Web RAG?**</td><td>**Change Tracked?**</td></tr><tr><td>E1</td><td>🔍 Analyzer</td><td>Research best practices via web search</td><td>✅ Yes</td><td>N/A (read-only)</td></tr><tr><td>E2</td><td>🔍 Analyzer</td><td>Compare current architecture to research</td><td>✅ Yes</td><td>N/A (analysis)</td></tr><tr><td>E3</td><td>🛡️ Guardian</td><td>**Pre-change safety check** (validate undo path)</td><td>No</td><td>✅ Logged</td></tr><tr><td>E4</td><td>🏗️ Builder</td><td>Create new agent(s) as `Status: Planned`</td><td>✅ Yes</td><td>✅ Execution Log</td></tr><tr><td>E5</td><td>🔍 Quality</td><td>Validate new agent schema + references</td><td>No</td><td>✅ Logged</td></tr><tr><td>E6</td><td>🛡️ Guardian</td><td>**Post-change validation** (core agents exist?)</td><td>No</td><td>✅ Logged</td></tr><tr><td>E7</td><td>🎛️ Orchestrator</td><td>Resume original prompt execution</td><td>No</td><td>✅ Logged</td></tr></tbody></table></div>
+### OABQ Stack (Core Execution Spine)
+```javascript
+┌─────────────────────────────────────────────────────────────┐
+│                    🔄 EVOLUTION LAYER                       │
+│  (Self-modification wrapper with mandatory safety checks)   │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│  🎛️ ORCHESTRATOR (Entry Point)                              │
+│  ├─ Intake raw prompt                                       │
+│  ├─ Optimize via COSTAR/CoT                                 │
+│  ├─ Plan execution + assign agents                          │
+│  └─ Invoke Evolution Layer IF architecture change needed    │
+└─────────────────────────────────────────────────────────────┘
+          │                    │                    │
+          ▼                    ▼                    ▼
+    ┌──────────┐        ┌──────────┐        ┌──────────┐
+    │ 🔍       │        │ 🏗️       │        │ 🛡️       │
+    │ ANALYZER │◄──────►│ BUILDER  │◄──────►│ GUARDIAN │
+    └──────────┘        └──────────┘        └──────────┘
+          │                    │                    │
+          └────────────────────┼────────────────────┘
+                              ▼
+                    ┌──────────────────┐
+                    │ 🔍 QUALITY AGENT │
+                    │ (Final gate)     │
+                    └──────────────────┘
+```
+### Maximum Runtime Strategy
+<callout icon="🚀" color="orange_bg">
+	### Techniques to Maximize Compute
+	<div class="table-container"><table header-row="true"><tbody><tr><td>**Technique**</td><td>**Implementation**</td></tr><tr><td>Parallel tool calls</td><td>Batch independent operations (search + view + query simultaneously)</td></tr><tr><td>Deep reasoning</td><td>Chain-of-Thought with self-consistency (multiple paths → vote)</td></tr><tr><td>Exhaustive search</td><td>Web RAG + internal search + connector search in parallel</td></tr><tr><td>Iterative refinement</td><td>Quality Agent loops back to Builder up to 3x per output</td></tr><tr><td>Full context loading</td><td>View all relevant pages before acting (maximize working memory)</td></tr></tbody></table></div>
+</callout>
+### Agent Composition Summary
+<div class="table-container"><table fit-page-width="true" header-row="true"><tbody><tr><td>**Composite Agent**</td><td>**Absorbs These Roles**</td></tr><tr><td>🎛️ Orchestrator</td><td>Prompt Engineer, Planner, Router, Meta-Orchestrator</td></tr><tr><td>🔍 Analyzer</td><td>Researcher, Evaluator, Devil's Advocate, Tester, Debugger, Gap Analyst</td></tr><tr><td>🏗️ Builder</td><td>Writer, Creator, Executor, Deployment Assistant, Agent Factory</td></tr><tr><td>🛡️ Guardian</td><td>Safety Agent, Security Agent, Policy/Guardrail Agent</td></tr><tr><td>🔍 Quality Agent</td><td>Critic, Validator</td></tr></tbody></table></div>
+<callout icon="📜" color="gray_bg">
+	**Evolution Layer Version:** v1.0 — <mention-date start="2026-01-18"> — Initial formalization of self-evolving architecture.
+</mention-date></callout>
+---
+## 📋 Response Format When Building Systems
+<callout icon="📐" color="purple_bg">
+	### When Asked to Build a Multi-Agent System:
+	1. **SYSTEM OVERVIEW** — Create parent page, define scope, list agents
+	2. **BUILD DATABASES** — Agent Registry, State Machine, Memory, Logs
+	3. **BUILD AGENT PAGES** — One page per agent with required sections
+	4. **WIRE SYNC BLOCKS** — Global context + per-agent output sync blocks
+	5. **VALIDATE** — Verify relations, check handlers, confirm transitions
+	6. **EXECUTE** — Begin at S0, follow protocol, log all actions
+</callout></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar" data-sidebar-mode="fit"><div class="graph" data-quartz-plugin="graph" data-quartz-component="Graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks" data-quartz-plugin="backlinks" data-quartz-component="Backlinks"><h3>Backlinks</h3><ul id="list-0" class="overflow"><li><a href="../../projects/uxr-hiring/portfolio-db/uxr-portfolio---case-studies.base" class="internal">UXR Portfolio - Case Studies</a></li><li><a href="../../projects/automations/automations-db/available-automations-db-[scripts---chains---workflows].base" class="internal">Available Automations DB [Scripts - chains - workflows]</a></li><li><a href="../../projects/uxr-blog/blog-db/uxr-blog-db.base" class="internal">UXR Blog DB</a></li><li class="overflow-end"></li></ul></div></div><footer class data-quartz-plugin="footer" data-quartz-component="Footer"><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.1.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-b151bd49.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-d0d7f98c.js" type="module" data-persist="true"></script></html>

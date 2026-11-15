@@ -1,0 +1,1565 @@
+{
+ "pipeline": "GLiNER(gliner_medium)+spaCy(en_core_web_lg)",
+ "files": {
+  "transcripts/april-6-2026-solberg-excerpts.txt": {
+   "spacy": [
+    {
+     "text": "2840s",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3010s",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2841",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2847",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Terry",
+     "label": "PERSON"
+    },
+    {
+     "text": "2851",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2854",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2858",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "] Soulberg Drive Southwest",
+     "label": "PERSON"
+    },
+    {
+     "text": "2861",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2863",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2867",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Thursday",
+     "label": "DATE"
+    },
+    {
+     "text": "2869] afternoon",
+     "label": "TIME"
+    },
+    {
+     "text": "Friday",
+     "label": "DATE"
+    },
+    {
+     "text": "today",
+     "label": "DATE"
+    },
+    {
+     "text": "2875",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2878",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2881",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "two",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2883",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2885",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2887",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Soulberg",
+     "label": "PERSON"
+    },
+    {
+     "text": "2890",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "second",
+     "label": "ORDINAL"
+    },
+    {
+     "text": "2892",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2895",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2899",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2911",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2912",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2916",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2919",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2921",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2923",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2926",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2932",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2936",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2938",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2940",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2944",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2947",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2949",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2952",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2955",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2957",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "two",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2962",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2964",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2968",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2970",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2973",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2975",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2977",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2978",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2982",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2985",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2989",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2991",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2993",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Clover Creek",
+     "label": "FAC"
+    },
+    {
+     "text": "2995",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2998",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3001",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3004",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3010",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3080s",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3180s",
+     "label": "DATE"
+    },
+    {
+     "text": "3081",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3086",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "American",
+     "label": "NORP"
+    },
+    {
+     "text": "first",
+     "label": "ORDINAL"
+    },
+    {
+     "text": "3090",
+     "label": "PRODUCT"
+    },
+    {
+     "text": "3092",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3096",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Michelle Lee",
+     "label": "PERSON"
+    },
+    {
+     "text": "3100",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "5105",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "Lee",
+     "label": "PERSON"
+    },
+    {
+     "text": "3112",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3115",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "3120",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "American",
+     "label": "NORP"
+    },
+    {
+     "text": "3129",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3131",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3134",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3135",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3137",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3143",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3146",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3148",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3152",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3155",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3159",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3161",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3165",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3167",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "3170",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Paul",
+     "label": "PERSON"
+    },
+    {
+     "text": "3176",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "two years ago",
+     "label": "DATE"
+    },
+    {
+     "text": "4340s",
+     "label": "DATE"
+    },
+    {
+     "text": "4570s",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4341",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4343",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4349",
+     "label": "DATE"
+    },
+    {
+     "text": "4354",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4360",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4363",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4365",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4367",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4375",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4382",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4385",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4393",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4395",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4398",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4400",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Council",
+     "label": "ORG"
+    },
+    {
+     "text": "Pearson",
+     "label": "PRODUCT"
+    },
+    {
+     "text": "4404",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4407",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lynholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "Lynholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "4425",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "city city",
+     "label": "GPE"
+    },
+    {
+     "text": "Russell",
+     "label": "PERSON"
+    },
+    {
+     "text": "4428",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Council",
+     "label": "ORG"
+    },
+    {
+     "text": "Pearson",
+     "label": "PRODUCT"
+    },
+    {
+     "text": "4429",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4431",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4436] $",
+     "label": "MONEY"
+    },
+    {
+     "text": "50,000",
+     "label": "MONEY"
+    },
+    {
+     "text": "4438",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "City",
+     "label": "PERSON"
+    },
+    {
+     "text": "Council",
+     "label": "PERSON"
+    },
+    {
+     "text": "Lynholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "4446",
+     "label": "DATE"
+    },
+    {
+     "text": "Mayor",
+     "label": "PERSON"
+    },
+    {
+     "text": "first",
+     "label": "ORDINAL"
+    },
+    {
+     "text": "4448",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "first",
+     "label": "ORDINAL"
+    },
+    {
+     "text": "4450",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4452",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4454",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4456",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4461",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4462",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4464",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4465",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4473",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4476",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4479",
+     "label": "DATE"
+    },
+    {
+     "text": "4481",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4483",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4485",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4487",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "the 11th hour",
+     "label": "TIME"
+    },
+    {
+     "text": "4493",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4495",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4498",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4500",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "three business days",
+     "label": "DATE"
+    },
+    {
+     "text": "4501",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4507",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4512",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "one",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4519",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4521",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4525",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "the 11th hour",
+     "label": "TIME"
+    },
+    {
+     "text": "4527",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4530",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4531",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4536",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4543",
+     "label": "DATE"
+    },
+    {
+     "text": "4546",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "two years",
+     "label": "DATE"
+    },
+    {
+     "text": "4548",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "two",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4550",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4552",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4555",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4557",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4560",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Council",
+     "label": "ORG"
+    },
+    {
+     "text": "Lynholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "Gum",
+     "label": "PERSON"
+    },
+    {
+     "text": "4565",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "M Council",
+     "label": "ORG"
+    },
+    {
+     "text": "Brandsteader",
+     "label": "PERSON"
+    },
+    {
+     "text": "4770s",
+     "label": "DATE"
+    },
+    {
+     "text": "4850s",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lynholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "Mayor",
+     "label": "PERSON"
+    },
+    {
+     "text": "one",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4781",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4785",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4791",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4796",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4803",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Council",
+     "label": "ORG"
+    },
+    {
+     "text": "Lynholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "4808",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4816",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "tonight",
+     "label": "TIME"
+    },
+    {
+     "text": "4822",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lindholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "Pearson",
+     "label": "PRODUCT"
+    },
+    {
+     "text": "4829",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Talbo",
+     "label": "PERSON"
+    },
+    {
+     "text": "4832",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4835",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Brandansteader",
+     "label": "PERSON"
+    },
+    {
+     "text": "Lorisella",
+     "label": "PERSON"
+    },
+    {
+     "text": "4842",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "4846",
+     "label": "CARDINAL"
+    }
+   ],
+   "gliner": [
+    {
+     "start": 102,
+     "end": 109,
+     "text": "council",
+     "label": "organization",
+     "score": 0.8820998072624207
+    },
+    {
+     "start": 122,
+     "end": 127,
+     "text": "Terry",
+     "label": "person",
+     "score": 0.9052670001983643
+    },
+    {
+     "start": 148,
+     "end": 167,
+     "text": "land use consultant",
+     "label": "position",
+     "score": 0.9265912175178528
+    },
+    {
+     "start": 198,
+     "end": 204,
+     "text": "client",
+     "label": "person",
+     "score": 0.5589954853057861
+    },
+    {
+     "start": 346,
+     "end": 353,
+     "text": "council",
+     "label": "organization",
+     "score": 0.8892419338226318
+    },
+    {
+     "start": 1049,
+     "end": 1055,
+     "text": "client",
+     "label": "person",
+     "score": 0.7426565289497375
+    }
+   ],
+   "relationships": []
+  },
+  "transcripts/may-4-2026-rental-housing-excerpts.txt": {
+   "spacy": [
+    {
+     "text": "7380s",
+     "label": "DATE"
+    },
+    {
+     "text": "7263",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lorisella",
+     "label": "PERSON"
+    },
+    {
+     "text": "Bransitter",
+     "label": "PERSON"
+    },
+    {
+     "text": "second",
+     "label": "ORDINAL"
+    },
+    {
+     "text": "7270",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lindholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "7272",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Mayor",
+     "label": "PERSON"
+    },
+    {
+     "text": "7275",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7277",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Brandstead",
+     "label": "PERSON"
+    },
+    {
+     "text": "7284",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "16 years",
+     "label": "DATE"
+    },
+    {
+     "text": "7287",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7296",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7303",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7308",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7313",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7315",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7317",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7325",
+     "label": "DATE"
+    },
+    {
+     "text": "one",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7326",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7328",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7332",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7344",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7354",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7356",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7358",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7360",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7364",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7366",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7367",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7374",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Council",
+     "label": "ORG"
+    },
+    {
+     "text": "Lauris Cellah",
+     "label": "PERSON"
+    },
+    {
+     "text": "7480s",
+     "label": "DATE"
+    },
+    {
+     "text": "Bradetter",
+     "label": "PERSON"
+    },
+    {
+     "text": "7448",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7451",
+     "label": "DATE"
+    },
+    {
+     "text": "7454",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7472",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "7478",
+     "label": "CARDINAL"
+    }
+   ],
+   "gliner": [
+    {
+     "start": 31,
+     "end": 45,
+     "text": "Council Member",
+     "label": "position",
+     "score": 0.5484602451324463
+    },
+    {
+     "start": 46,
+     "end": 55,
+     "text": "Lorisella",
+     "label": "person",
+     "score": 0.7098259329795837
+    },
+    {
+     "start": 60,
+     "end": 70,
+     "text": "Bransitter",
+     "label": "person",
+     "score": 0.881782054901123
+    },
+    {
+     "start": 186,
+     "end": 200,
+     "text": "Council member",
+     "label": "position",
+     "score": 0.664347767829895
+    },
+    {
+     "start": 201,
+     "end": 209,
+     "text": "Lindholm",
+     "label": "person",
+     "score": 0.8788930773735046
+    },
+    {
+     "start": 316,
+     "end": 326,
+     "text": "Brandstead",
+     "label": "person",
+     "score": 0.7675022482872009
+    },
+    {
+     "start": 482,
+     "end": 506,
+     "text": "real estate professional",
+     "label": "position",
+     "score": 0.5963597297668457
+    },
+    {
+     "start": 1251,
+     "end": 1260,
+     "text": "homeowner",
+     "label": "person",
+     "score": 0.515411913394928
+    }
+   ],
+   "relationships": []
+  },
+  "f1-2025-extract.md": {
+   "spacy": [
+    {
+     "text": "# F-1 Extract",
+     "label": "ORG"
+    },
+    {
+     "text": "Philip Lindholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "132557",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "2026-03-23",
+     "label": "DATE"
+    },
+    {
+     "text": "2025-01-01",
+     "label": "DATE"
+    },
+    {
+     "text": "University of Washington Medical Center \u2014 MEDICAL",
+     "label": "ORG"
+    },
+    {
+     "text": "0-29999",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "30000",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Accounting Service \u2014 Military",
+     "label": "ORG"
+    },
+    {
+     "text": "60000",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "60000",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "10%+",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Wyoming Housing Holding Company**",
+     "label": "ORG"
+    },
+    {
+     "text": "Philip Lindholm",
+     "label": "PERSON"
+    },
+    {
+     "text": "100%",
+     "label": "PERCENT"
+    },
+    {
+     "text": "107",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Louise Dr",
+     "label": "PERSON"
+    },
+    {
+     "text": "Lakewood 98498\n  - WA",
+     "label": "PERSON"
+    },
+    {
+     "text": "9908",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood 98499",
+     "label": "ORG"
+    },
+    {
+     "text": "Washington Ventures Management",
+     "label": "ORG"
+    },
+    {
+     "text": "Washington Ventures Management",
+     "label": "ORG"
+    },
+    {
+     "text": "100%",
+     "label": "PERCENT"
+    },
+    {
+     "text": "Terry Wise & Associates",
+     "label": "ORG"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "LLC",
+     "label": "ORG"
+    },
+    {
+     "text": "Real Estate Activities",
+     "label": "ORG"
+    },
+    {
+     "text": "84%",
+     "label": "PERCENT"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood 98499",
+     "label": "ORG"
+    },
+    {
+     "text": "107",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Lake Louise",
+     "label": "EVENT"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "200000-499999",
+     "label": "DATE"
+    },
+    {
+     "text": "1223",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Tacoma",
+     "label": "GPE"
+    },
+    {
+     "text": "1000000-",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "1223",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "1000000-",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "S. 9th St. Suite",
+     "label": "ORG"
+    },
+    {
+     "text": "102",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Tacoma",
+     "label": "GPE"
+    },
+    {
+     "text": "200000-499999",
+     "label": "DATE"
+    },
+    {
+     "text": "Terry Wise",
+     "label": "PERSON"
+    },
+    {
+     "text": "200000-499999",
+     "label": "DATE"
+    },
+    {
+     "text": "520",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "Buena Vista Ave",
+     "label": "ORG"
+    },
+    {
+     "text": "Fircrest",
+     "label": "GPE"
+    },
+    {
+     "text": "200000-499999",
+     "label": "DATE"
+    },
+    {
+     "text": "Andy Tran",
+     "label": "PERSON"
+    },
+    {
+     "text": "200000-499999",
+     "label": "DATE"
+    },
+    {
+     "text": "9908",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "1000000-",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "S. Huson",
+     "label": "PERSON"
+    },
+    {
+     "text": "Tacoma",
+     "label": "GPE"
+    },
+    {
+     "text": "30000-59999",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "SW",
+     "label": "GPE"
+    },
+    {
+     "text": "Lakewood",
+     "label": "GPE"
+    },
+    {
+     "text": "1000000-",
+     "label": "CARDINAL"
+    },
+    {
+     "text": "30,000\u2013$59,999",
+     "label": "MONEY"
+    },
+    {
+     "text": "PDC",
+     "label": "ORG"
+    },
+    {
+     "text": "12,000",
+     "label": "MONEY"
+    },
+    {
+     "text": "12,000",
+     "label": "MONEY"
+    }
+   ],
+   "gliner": [
+    {
+     "start": 16,
+     "end": 31,
+     "text": "Philip Lindholm",
+     "label": "person",
+     "score": 0.975326418876648
+    },
+    {
+     "start": 340,
+     "end": 379,
+     "text": "University of Washington Medical Center",
+     "label": "organization",
+     "score": 0.8800402879714966
+    },
+    {
+     "start": 382,
+     "end": 399,
+     "text": "MEDICAL ASSISTANT",
+     "label": "position",
+     "score": 0.9137752056121826
+    },
+    {
+     "start": 412,
+     "end": 415,
+     "text": "OPM",
+     "label": "organization",
+     "score": 0.8024120330810547
+    },
+    {
+     "start": 443,
+     "end": 481,
+     "text": "Defense Finance and Accounting Service",
+     "label": "organization",
+     "score": 0.8185137510299683
+    },
+    {
+     "start": 595,
+     "end": 626,
+     "text": "Wyoming Housing Holding Company",
+     "label": "company",
+     "score": 0.8627967834472656
+    },
+    {
+     "start": 661,
+     "end": 676,
+     "text": "Philip Lindholm",
+     "label": "person",
+     "score": 0.9543685913085938
+    },
+    {
+     "start": 832,
+     "end": 862,
+     "text": "Washington Ventures Management",
+     "label": "company",
+     "score": 0.9053042531013489
+    },
+    {
+     "start": 883,
+     "end": 913,
+     "text": "Washington Ventures Management",
+     "label": "company",
+     "score": 0.853888988494873
+    },
+    {
+     "start": 992,
+     "end": 1015,
+     "text": "Terry Wise & Associates",
+     "label": "company",
+     "score": 0.7171182036399841
+    },
+    {
+     "start": 1042,
+     "end": 1082,
+     "text": "8814-8815 Lochburn Lane SW Lakewood, LLC",
+     "label": "company",
+     "score": 0.7469615340232849
+    },
+    {
+     "start": 1103,
+     "end": 1143,
+     "text": "8814-8815 Lochburn Lane SW Lakewood, LLC",
+     "label": "company",
+     "score": 0.7953740358352661
+    },
+    {
+     "start": 1418,
+     "end": 1433,
+     "text": "1223 S J St LLC",
+     "label": "company",
+     "score": 0.5187129378318787
+    },
+    {
+     "start": 1531,
+     "end": 1541,
+     "text": "Terry Wise",
+     "label": "person",
+     "score": 0.8735164999961853
+    },
+    {
+     "start": 1641,
+     "end": 1650,
+     "text": "Andy Tran",
+     "label": "person",
+     "score": 0.9725789427757263
+    }
+   ],
+   "relationships": []
+  }
+ }
+}

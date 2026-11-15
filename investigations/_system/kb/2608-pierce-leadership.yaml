@@ -1,0 +1,26 @@
+inherits: universal
+case: 2608-pierce-leadership
+case_id: INV-2026-002
+evidence_prefix: E
+
+entities:
+  - {name: Ryan Mello, type: person, aliases: [Mello]}
+  - {name: Kelly Chambers, type: person, aliases: [Chambers]}
+  - {name: Keith Swank, type: person, aliases: [Swank]}
+  - {name: Mary Robnett, type: person, aliases: [Robnett]}
+  - {name: Jani Hitchen, type: person, aliases: [Hitchen]}
+  - {name: Tom Pierson, type: person, aliases: [Pierson]}
+  - {name: John Wiborg, type: person, aliases: [Wiborg]}
+  - {name: Nathe Lawver, type: person, aliases: [Lawver]}
+  - {name: Joint Base Lewis-McChord, type: government_body, aliases: [JBLM]}
+  - {name: MultiCare, type: organization}
+  - {name: Puyallup Tribe, type: organization, aliases: [Puyallup Tribe of Indians]}
+  - {name: Weyerhaeuser, type: organization}
+  - {name: Port of Tacoma, type: government_body}
+  - {name: Tacoma-Pierce County Chamber, type: organization, aliases: [Chamber of Commerce]}
+  - {name: The News Tribune, type: organization, aliases: [News Tribune]}
+  - {name: Chatham Asset Management, type: organization}
+  - {name: McClatchy, type: organization}
+
+claims:
+  predicates: [employ, own, donate, fund, grant, appoint, lobby, chair, acquire]

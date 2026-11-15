@@ -1,0 +1,1 @@
+{"ts": "2026-11-14", "agent": "michael", "note": "Investigations/_inbox/2026-11-14-lindholm-filing-note.md", "case": null, "sha256": "5c9dab24b932e8897bdaf8d375e0fb17c6ad5f92627feae5d093ce2c101657a2", "claims": 4, "claims_with_evidence": 2, "problems": ["note is not inside a case folder and no case was given"], "idempotent": false}

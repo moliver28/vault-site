@@ -1,0 +1,633 @@
+{
+ "generated": "2026-11-14",
+ "links": [
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Brandstetter",
+   "surface": "Brandstetter"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Paul-Bocchi",
+   "surface": "Bocchi"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Ryan-Pearson",
+   "surface": "Pearson"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Lauricella",
+   "surface": "Lauricella"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Lindholm"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Concord-Counsel",
+   "surface": "Concord Counsel"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Terry-Wise",
+   "surface": "Terry Wise"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Solberg",
+   "surface": "Solberg"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/news-tribune",
+   "surface": "News Tribune"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/pierce-transit",
+   "surface": "Pierce Transit"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/paul-herrera",
+   "surface": "Paul Herrera"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Brandstetter",
+   "surface": "Brandstetter"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Paul-Bocchi",
+   "surface": "Paul Bocchi"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/county-council",
+   "surface": "Pierce County Council"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Patti-Belle",
+   "surface": "Patti Belle"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Ellen-Talbo",
+   "surface": "Ellen Talbo"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Ryan-Pearson",
+   "surface": "Ryan Pearson"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Lauricella",
+   "surface": "Lauricella"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/pierce-transit",
+   "surface": "Pierce Transit"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Philip Lindholm"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Terry-Wise",
+   "surface": "Terry Wise"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "target": "Investigations/Entities/Solberg",
+   "surface": "Solberg"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "target": "Investigations/Entities/Solberg",
+   "surface": "Solberg"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Lindholm"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "target": "Investigations/Entities/Ryan-Pearson",
+   "surface": "Pearson"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "target": "Investigations/Entities/Lauricella",
+   "surface": "Lauricella"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Questions.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Lindholm"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Questions.md",
+   "target": "Investigations/Entities/Solberg",
+   "surface": "Solberg"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Questions.md",
+   "target": "Investigations/Entities/Concord-Counsel",
+   "surface": "Concord Counsel"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Questions.md",
+   "target": "Investigations/Entities/Brandstetter",
+   "surface": "Brandstetter"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Questions.md",
+   "target": "Investigations/Entities/Ryan-Pearson",
+   "surface": "Pearson"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Record.md",
+   "target": "Investigations/Entities/Concord-Counsel",
+   "surface": "Concord Counsel"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Record.md",
+   "target": "Investigations/Entities/Lauricella",
+   "surface": "Lauricella"
+  },
+  {
+   "note": "Investigations/2608-lakewood-council/Lakewood Record.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Lindholm"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/keith-swank",
+   "surface": "Keith Swank"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/mary-robnett",
+   "surface": "Mary Robnett"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/linda-farmer",
+   "surface": "Linda Farmer"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/marty-campbell",
+   "surface": "Marty Campbell"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/dave-morell",
+   "surface": "Dave Morell"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/paul-herrera",
+   "surface": "Paul Herrera"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/amy-cruver",
+   "surface": "Amy Cruver"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/rosie-ayala",
+   "surface": "Rosie Ayala"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/bryan-yambe",
+   "surface": "Bryan Yambe"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/jani-hitchen",
+   "surface": "Jani Hitchen"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/robyn-denson",
+   "surface": "Robyn Denson"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/john-mccarthy",
+   "surface": "John McCarthy"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/dick-marzano",
+   "surface": "Dick Marzano"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/deanna-keller",
+   "surface": "Deanna Keller"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/jt-wilcox",
+   "surface": "JT Wilcox"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/kristin-ang",
+   "surface": "Kristin Ang"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/anders-ibsen",
+   "surface": "Anders Ibsen"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/kristina-walker",
+   "surface": "Kristina Walker"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/jim-kastama",
+   "surface": "Jim Kastama"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/deb-krishnadasan",
+   "surface": "Deb Krishnadasan"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/jake-fey",
+   "surface": "Jake Fey"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/Entities/MultiCare",
+   "surface": "MultiCare"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/florence-chang",
+   "surface": "Florence Chang"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/2608-pierce-leadership.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/bill-sterud",
+   "surface": "Bill Sterud"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/tom-pierson",
+   "surface": "Tom Pierson"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/john-wiborg",
+   "surface": "John Wiborg"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/Entities/MultiCare",
+   "surface": "MultiCare"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/nathe-lawver",
+   "surface": "Nathe Lawver"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/united-way",
+   "surface": "United Way"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/ryan-mello",
+   "surface": "Ryan Mello"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/kelly-chambers",
+   "surface": "Kelly Chambers"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/puyallup-tribe",
+   "surface": "Puyallup Tribe"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/mcclatchy",
+   "surface": "McClatchy"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/Entities/The-News-Tribune",
+   "surface": "The News Tribune"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Brief.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/mcclatchy",
+   "surface": "McClatchy"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/tom-pierson",
+   "surface": "Tom Pierson"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/john-wiborg",
+   "surface": "John Wiborg"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/Entities/MultiCare",
+   "surface": "MultiCare"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/nathe-lawver",
+   "surface": "Nathe Lawver"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/united-way",
+   "surface": "United Way"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/puyallup-tribe",
+   "surface": "Puyallup Tribe"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/mcclatchy",
+   "surface": "McClatchy"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/news-tribune",
+   "surface": "News Tribune"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Findings.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/jim-kastama",
+   "surface": "Jim Kastama"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Method.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/kelly-chambers",
+   "surface": "Kelly Chambers"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/chamber",
+   "surface": "Chamber of Commerce"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/tom-pierson",
+   "surface": "Tom Pierson"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/john-wiborg",
+   "surface": "John Wiborg"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/Entities/MultiCare",
+   "surface": "MultiCare"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/weyerhaeuser",
+   "surface": "Weyerhaeuser"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/john-mccarthy",
+   "surface": "John McCarthy"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/port-tacoma",
+   "surface": "Port of Tacoma"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/superior-court",
+   "surface": "Superior Court"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/miles-sand-gravel",
+   "surface": "Miles Sand & Gravel"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/edb",
+   "surface": "Economic Development Board"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/rush-development",
+   "surface": "Rush Development"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/southport",
+   "surface": "Southport Real Estate"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/tucci-sons",
+   "surface": "Tucci & Sons"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/lincoln-park",
+   "surface": "Lincoln Park Partners"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/nall-capital",
+   "surface": "Nall Capital"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/pse",
+   "surface": "Puget Sound Energy"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/nash-cascadia",
+   "surface": "NASH Cascadia"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/jt-wilcox",
+   "surface": "JT Wilcox"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/amazon",
+   "surface": "Amazon (distribution)"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/master-builders",
+   "surface": "Master Builders"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/eric-johnson",
+   "surface": "Eric Johnson"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/nwsa",
+   "surface": "Northwest Seaport Alliance"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce People.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/dick-marzano",
+   "surface": "Dick Marzano"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Record.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/puyallup-tribe",
+   "surface": "Puyallup Tribe"
+  },
+  {
+   "note": "Investigations/2608-pierce-leadership/Pierce Record.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/pierce-transit",
+   "surface": "Pierce Transit"
+  },
+  {
+   "note": "Investigations/Review 2026-11-14.md",
+   "target": "Investigations/Entities/Solberg",
+   "surface": "Solberg"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/INSTALLATION-COMPLETE.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/county-council",
+   "surface": "Pierce County Council"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/INSTALLATION-COMPLETE.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/pierce-transit",
+   "surface": "Pierce Transit"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/INVESTIGATION-ACTIVE.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/news-tribune",
+   "surface": "News Tribune"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/INVESTIGATION-ACTIVE.md",
+   "target": "Investigations/Entities/Investigative-Hub",
+   "surface": "Investigative Hub"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/OSS-INSTALLATION-STATUS.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Philip Lindholm"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/README.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/ryan-mello",
+   "surface": "Ryan Mello"
+  },
+  {
+   "note": "Investigations/_system/2608-journalism-system/investigative-journalist-enhancements.md",
+   "target": "Investigations/Entities/Investigative-Hub",
+   "surface": "Investigative Hub"
+  },
+  {
+   "note": "Investigations/_system/investigations/engine/README.md",
+   "target": "Investigations/2608-pierce-leadership/record/profiles/ryan-mello",
+   "surface": "Ryan Mello"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Brandstetter",
+   "surface": "Brandstetter"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Paul-Bocchi",
+   "surface": "Bocchi"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Ryan-Pearson",
+   "surface": "Pearson"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Lauricella",
+   "surface": "Lauricella"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Philip-Lindholm",
+   "surface": "Lindholm"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Concord-Counsel",
+   "surface": "Concord Counsel"
+  },
+  {
+   "note": "Investigations/_system/investigations/site/cards/2608-lakewood-council.md",
+   "target": "Investigations/Entities/Terry-Wise",
+   "surface": "Terry Wise"
+  }
+ ],
+ "entities": [
+  "Brandstetter.md",
+  "Chamber.md",
+  "Concord-Counsel.md",
+  "Ellen-Talbo.md",
+  "Investigative-Hub.md",
+  "Lauricella.md",
+  "MultiCare.md",
+  "Patti-Belle.md",
+  "Paul-Bocchi.md",
+  "Philip-Lindholm.md",
+  "Pierce.md",
+  "Ryan-Pearson.md",
+  "Solberg.md",
+  "Terry-Wise.md",
+  "The-News-Tribune.md"
+ ],
+ "metrics": {
+  "notes": 49,
+  "edges": 129,
+  "density": 0.1097,
+  "lcc_share": 0.939,
+  "cross_folder_share": 0.829,
+  "modularity": 0.392,
+  "reach": 0.54,
+  "integration_index": 0.711,
+  "components": 4
+ }
+}

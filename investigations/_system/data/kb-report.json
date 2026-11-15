@@ -1,0 +1,155 @@
+{
+ "case": "2608-lakewood-council",
+ "notes": 6,
+ "mentions": 515,
+ "resolved": 213,
+ "canonisation_rate": 0.414,
+ "by_method": {
+  "embedding": 26,
+  "fuzzy": 20,
+  "alias": 149,
+  "exact": 64
+ },
+ "unresolved_top": [
+  [
+   "Richland",
+   11
+  ],
+  [
+   "Lynnwood",
+   7
+  ],
+  [
+   "Pierce County",
+   7
+  ],
+  [
+   "Conner Edwards",
+   6
+  ],
+  [
+   "Van Vechten",
+   6
+  ],
+  [
+   "Socrata API",
+   5
+  ],
+  [
+   "Kirkland",
+   5
+  ],
+  [
+   "Federal Way",
+   5
+  ],
+  [
+   "PDC F-1",
+   4
+  ],
+  [
+   "Kent Mayor Ralph",
+   4
+  ],
+  [
+   "City Council",
+   4
+  ],
+  [
+   "Capital Ventures",
+   4
+  ],
+  [
+   "Puyallup",
+   3
+  ],
+  [
+   "Lacey",
+   3
+  ],
+  [
+   "Shoreline",
+   3
+  ],
+  [
+   "Dana Ralph",
+   3
+  ],
+  [
+   "Terry Wise & Assoc",
+   3
+  ],
+  [
+   "Seattle Times",
+   3
+  ],
+  [
+   "Ethics Board",
+   3
+  ],
+  [
+   "Bocchi PDC",
+   3
+  ]
+ ],
+ "alias_proposals": [
+  {
+   "entity": "Pierce County Council",
+   "surface": "Pierce County",
+   "count": 7
+  },
+  {
+   "entity": "Tacoma City Council",
+   "surface": "City Council",
+   "count": 4
+  },
+  {
+   "entity": "Puyallup Tribe",
+   "surface": "Puyallup",
+   "count": 3
+  },
+  {
+   "entity": "Terry Wise & Associates",
+   "surface": "Terry Wise & Assoc",
+   "count": 3
+  },
+  {
+   "entity": "Paul Bocchi",
+   "surface": "Bocchi PDC",
+   "count": 3
+  },
+  {
+   "entity": "Solberg",
+   "surface": "Solberg Dr SW",
+   "count": 3
+  },
+  {
+   "entity": "Terry Wise",
+   "surface": "Terry",
+   "count": 2
+  },
+  {
+   "entity": "South Sound 911",
+   "surface": "South Sound",
+   "count": 2
+  }
+ ],
+ "claims": {
+  "total": 98,
+  "duplicated": 0,
+  "without_evidence": 61,
+  "contradictions": 0
+ },
+ "entities": 182,
+ "graph": {
+  "notes": 51,
+  "edges": 130,
+  "density": 0.102,
+  "lcc_share": 0.922,
+  "cross_folder_share": 0.823,
+  "modularity": 0.395,
+  "reach": 0.5,
+  "integration_index": 0.692,
+  "components": 5
+ }
+}

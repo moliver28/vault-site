@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>red-team-report</title><meta charset="utf-8"/><link rel="preload" href="../../../../index-64dfc6b1.css" as="style"/><link rel="preload" href="../../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 5"/><meta property="og:title" content="red-team-report"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="red-team-report"/><meta name="twitter:description" content="RED-TEAM REPORT — INV-2026-002 (Pierce County Leadership) Red-team operating assumption: EVERYTHING in this investigation is wrong."/><meta property="og:description" content="RED-TEAM REPORT — INV-2026-002 (Pierce County Leadership) Red-team operating assumption: EVERYTHING in this investigation is wrong."/><meta property="og:image:alt" content="RED-TEAM REPORT — INV-2026-002 (Pierce County Leadership) Red-team operating assumption: EVERYTHING in this investigation is wrong."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/investigations/2608-pierce-leadership/record/working/red-team-report"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/investigations/2608-pierce-leadership/record/working/red-team-report"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="RED-TEAM REPORT — INV-2026-002 (Pierce County Leadership) Red-team operating assumption: EVERYTHING in this investigation is wrong."/><meta name="generator" content="Quartz"/><link href="../../../../index-64dfc6b1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-b43df3ac.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-9406c2cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-02d2a92c.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-0be4fa7f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-d2eefd3a.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-a71023bb.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-89d3cd78.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../../static/contentIndex.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json() }).catch(e => { console.warn("[Quartz] Could not load ../../../../static/contentIndex.json (" + e.message + "); is configuration.contentIndex disabled?"); return {} });window.quartzStaticUrl = new URL("../../../../static/", location.href).href</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/investigations/2608-pierce-leadership/record/working/red-team-report-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/investigations/2608-pierce-leadership/record/working/red-team-report-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/investigations/2608-pierce-leadership/record/working/red-team-report-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="investigations/2608-pierce-leadership/record/working/red-team-report" data-basepath><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar" data-sidebar-mode="fit"><h2 class="page-title" data-quartz-plugin="page-title" data-quartz-component="PageTitle"><a href="../../../..">Quartz 5</a></h2><div class="mobile-only"><div class="spacer" data-quartz-plugin="spacer" data-quartz-component="Spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search" data-quartz-plugin="search" data-quartz-component="Search"><button class="search-button" aria-label="Search" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something..." placeholder="Search for something..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Dark mode" data-quartz-plugin="darkmode" data-quartz-component="Darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Reader mode" data-quartz-plugin="reader-mode" data-quartz-component="ReaderMode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a, b) => {\n    if (!a.isFolder &amp;&amp; !b.isFolder || a.isFolder &amp;&amp; b.isFolder) {\n      return (a.displayName || \&quot;\&quot;).localeCompare(b.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a.isFolder &amp;&amp; b.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}" data-quartz-plugin="explorer" data-quartz-component="Explorer"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-313" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-313" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs" data-quartz-plugin="breadcrumbs" data-quartz-component="Breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../investigations/">Investigations</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../investigations/2608-pierce-leadership/">2026-08-17: Pierce County Leadership Investigation</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../investigations/2608-pierce-leadership/record/">record</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../investigations/2608-pierce-leadership/record/working/">working</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>red-team-report</a></div></nav><h1 class="article-title" data-quartz-plugin="article-title" data-quartz-component="ArticleTitle">red-team-report</h1><p show-comma="true" class="content-meta" data-quartz-plugin="content-meta" data-quartz-component="ContentMeta"><time datetime="2026-11-15T20:42:21.796Z">Nov 15, 2026</time><span>13 min read</span></p></div></div><article class="popover-hint" data-quartz-plugin="content-page" data-quartz-component="ContentPage"><div class="markdown-preview-view markdown-rendered"><h1 id="red-team-report--inv-2026-002-pierce-county-leadership">RED-TEAM REPORT — INV-2026-002 (Pierce County Leadership)<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#red-team-report--inv-2026-002-pierce-county-leadership" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Red-team operating assumption:</strong> EVERYTHING in this investigation is wrong. Every claim was attacked against primary sources (.gov, Ballotpedia, Wikipedia, WA PDC, IRS 990s via ProPublica, Fitch, org websites, court/AG records). Only claims that survived are kept.<br/>
+<strong>Verification date:</strong> 2026-09-09<br/>
+<strong>Method:</strong> Independent web_search/web_extract against primary sources. Evidence files were treated as hostile/untrusted.</p>
+<hr/>
+<h2 id="verdict-summary">VERDICT SUMMARY<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#verdict-summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>The investigation survives its attack substantially intact — roughly 80% of the core factual claims are CONFIRMED against primary sources.</strong> The formal power structure (Mello, Council 4D-3R, Swank, Robnett), the major dollar figures (JBLM $12.1B, MultiCare $7.2B, County $3.5B, Weyerhaeuser 10.4M acres, Port cargo, Chamber $3M, Pierce Transit $345M), the campaign-finance numbers, the entity roster, and the audit’s 12 edge corrections all check out.</p>
+<p><strong>What is WRONG or WEAK:</strong></p>
+<ol>
+<li><strong>The composite power score is a network-centrality measure, not a power measure.</strong> It systematically over-ranks hubs (Council, party nodes, courts) and under-ranks veto/structural actors (Tribe, JBLM, Sheriff, Chamber). The audit itself concedes this. The ranking in evidence/12 is a defensible <em>qualitative</em> ranking; the graph’s computed composite is not.</li>
+<li><strong>The structural-capture thesis overreaches.</strong> The underlying facts (federal appropriations, tax exemption, sovereignty, land grant, public levy) are all real and verified. But the conclusion that “the private sector is a government-created rentier class” is editorializing, not evidence. The “growth machine” is a recognized academic lens (Logan &amp; Molotch) but the evidence shows overlapping interests, not a proven coordinated machine.</li>
+<li><strong>Several dollar figures are mischaracterized</strong> (Puyallup “$162M assets” is actually the 1990 settlement; JBLM “$12.1B” is a combined Pierce+Thurston multiplier figure; “Tacoma Schools $1B+ levy” is not supported).</li>
+<li><strong>Domain assignments are contestable</strong> (Port should be government, not economic; Tribe/Chamber/MultiCare are borderline).</li>
+<li><strong>The graph has real bugs</strong> the audit caught: duplicate/contradictory Sterud edges, reversed <code>appropriates</code> edges, wrong <code>elected</code> edges, and the Puyallup chairman rotates annually (Sterud ↔ Bean).</li>
+</ol>
+<hr/>
+<h2 id="confirmed-claims-survived-attack--each-with-primary-source">CONFIRMED CLAIMS (survived attack — each with primary source)<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#confirmed-claims-survived-attack--each-with-primary-source" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Claim</th><th>Primary source</th></tr></thead><tbody><tr><td>Ryan Mello is County Executive, elected 2024, general margin 51.28%–48.58%</td><td><a href="https://en.wikipedia.org/wiki/2024_Pierce_County_Executive_election" class="external external-link">https://en.wikipedia.org/wiki/2024_Pierce_County_Executive_election<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://ballotpedia.org/Ryan_Mello_(Pierce_County_Executive,_Washington,_candidate_2024)" class="external external-link">https://ballotpedia.org/Ryan_Mello_(Pierce_County_Executive,_Washington,_candidate_2024)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Mello took office Jan 2025; first openly-gay WA county exec</td><td><a href="https://www.piercecountywa.gov/8703/Biography" class="external external-link">https://www.piercecountywa.gov/8703/Biography<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Pierce County Council is 7 members, 4D-3R; members Morell(R-1), Herrera(R-2), Cruver(R-3), Ayala(D-4), Yambe(D-5), Hitchen(D-6), Denson(D-7)</td><td><a href="https://www.piercecountywa.gov/99/Pierce-County-Council" class="external external-link">https://www.piercecountywa.gov/99/Pierce-County-Council<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://en.wikipedia.org/wiki/Pierce_County_Council" class="external external-link">https://en.wikipedia.org/wiki/Pierce_County_Council<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Keith Swank is Sheriff (since 2025); Mary Robnett is Prosecuting Attorney (since 2019)</td><td><a href="https://www.piercecountywa.gov/126/Meet-Your-Sheriff" class="external external-link">https://www.piercecountywa.gov/126/Meet-Your-Sheriff<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.piercecountywa.gov/3560/About-Mary-Robnett" class="external external-link">https://www.piercecountywa.gov/3560/About-Mary-Robnett<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>JBLM economic impact ~$12.1B (UW Tacoma study, Pierce+Thurston combined)</td><td><a href="https://cityoflakewood.us/jblm-economic-impact" class="external external-link">https://cityoflakewood.us/jblm-economic-impact<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>MultiCare revenue ~$7.2B FY2025 (Fitch)</td><td><a href="https://www.fitchratings.com/research/us-public-finance/fitch-affirms-multicare-healthcare-system-wa-at-a-outlook-stable-11-06-2026" class="external external-link">https://www.fitchratings.com/research/us-public-finance/fitch-affirms-multicare-healthcare-system-wa-at-a-outlook-stable-11-06-2026<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Puyallup Tribe 1990 settlement = $162M cash/real estate/programs + 900 acres</td><td><a href="https://www.latimes.com/archives/la-xpm-1990-03-24-mn-680-story.html" class="external external-link">https://www.latimes.com/archives/la-xpm-1990-03-24-mn-680-story.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.historylink.org/File/7969" class="external external-link">https://www.historylink.org/File/7969<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Weyerhaeuser owns/controls ~10.4M acres U.S. timberlands (still accurate, largest private owner)</td><td><a href="https://investor.weyerhaeuser.com/2025-10-30-Weyerhaeuser-Provides-Update-on-Timberlands-Portfolio-Optimization-Actions" class="external external-link">https://investor.weyerhaeuser.com/2025-10-30-Weyerhaeuser-Provides-Update-on-Timberlands-Portfolio-Optimization-Actions<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Weyerhaeuser 1900 purchase: 900,000 acres from Northern Pacific for $6/acre ($5.4M)</td><td><a href="https://www.historylink.org/file/5241" class="external external-link">https://www.historylink.org/file/5241<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://foresthistory.org/wp-content/uploads/2016/12/stillgrowing-after-100-years.pdf" class="external external-link">https://foresthistory.org/wp-content/uploads/2016/12/stillgrowing-after-100-years.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>NWSA handled nearly $76B waterborne trade in 2024 (note: ~$68B in 2025)</td><td><a href="https://www.nwseaportalliance.com/about-us/cargo-statistics" class="external external-link">https://www.nwseaportalliance.com/about-us/cargo-statistics<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Pierce County 2026-27 biennial budget = $3.5B, adopted Nov 25, 2025</td><td><a href="https://www.piercecountywa.gov/8875/2026-2027-Biennial-Budget-Development" class="external external-link">https://www.piercecountywa.gov/8875/2026-2027-Biennial-Budget-Development<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Sheriff budget $406M (LE $242.2M + Corrections $164.3M = 42% of GF); ~76-77% of GF to law/justice</td><td><a href="https://www.piercecountywa.gov/CivicSend/ViewMessage/message/277287" class="external external-link">https://www.piercecountywa.gov/CivicSend/ViewMessage/message/277287<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.govtech.com/em/safety/pierce-county-wash-earmarks-77-of-budget-for-public-safety" class="external external-link">https://www.govtech.com/em/safety/pierce-county-wash-earmarks-77-of-budget-for-public-safety<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Mello raised ~$510K, Chambers ~$550K, Swank ~$121K (PDC)</td><td><a href="https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/93053" class="external external-link">https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/93053<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Mello); PDC candidate pages for Chambers/Swank</td></tr><tr><td>Chamber revenue $3.08M FY2024 (501(c)(6))</td><td><a href="https://projects.propublica.org/nonprofits/organizations/910434830" class="external external-link">https://projects.propublica.org/nonprofits/organizations/910434830<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Pierce Transit 2026 adopted budget ~$345M</td><td><a href="https://piercetransit.org/wp-content/uploads/2025/2026-Adopted-Budget.pdf" class="external external-link">https://piercetransit.org/wp-content/uploads/2025/2026-Adopted-Budget.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Port of Tacoma is an independent municipal corporation under RCW Title 53, 5 county-wide elected commissioners</td><td><a href="https://www.portoftacoma.com/commission" class="external external-link">https://www.portoftacoma.com/commission<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://app.leg.wa.gov/rcw/default.aspx?Cite=53" class="external external-link">https://app.leg.wa.gov/rcw/default.aspx?Cite=53<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>VMFH is owned by/affiliated with CommonSpirit Health (Chicago)</td><td><a href="https://www.vmfh.org/about-vmfh" class="external external-link">https://www.vmfh.org/about-vmfh<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://en.wikipedia.org/wiki/Virginia_Mason_Medical_Center" class="external external-link">https://en.wikipedia.org/wiki/Virginia_Mason_Medical_Center<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Jim Kastama is on Puyallup City Council (D1), NOT Pierce County Council</td><td><a href="https://www.puyallupwa.gov/634/District-1---Jim-Kastama" class="external external-link">https://www.puyallupwa.gov/634/District-1---Jim-Kastama<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>T’wina Nobles is on University Place School Board (and 28th LD Senator)</td><td><a href="https://senatedemocrats.wa.gov/nobles/biography" class="external external-link">https://senatedemocrats.wa.gov/nobles/biography<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Nathe Lawver is the GTCF–United Way interlock (UWPC Board Chair + GTCF board + Building Trades exec sec)</td><td><a href="https://www.uwpc.org/board-directors" class="external external-link">https://www.uwpc.org/board-directors<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.gtcf.org/blog/profile/nathe-lawver" class="external external-link">https://www.gtcf.org/blog/profile/nathe-lawver<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Steve Conway (D-29) announced Jan 21, 2026 he will NOT seek re-election</td><td><a href="https://senatedemocrats.wa.gov/conway/2026/01/21/sen-conway-announces-he-will-not-seek-re-election" class="external external-link">https://senatedemocrats.wa.gov/conway/2026/01/21/sen-conway-announces-he-will-not-seek-re-election<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://ballotpedia.org/Steve_Conway" class="external external-link">https://ballotpedia.org/Steve_Conway<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Deb Krishnadasan is 26th LD Senator (appointed Dec 2024)</td><td><a href="https://ballotpedia.org/Deborah_Krishnadasan" class="external external-link">https://ballotpedia.org/Deborah_Krishnadasan<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Jake Fey is 27th LD Rep, House Transportation Chair</td><td><a href="https://jakefey.com" class="external external-link">https://jakefey.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://housedemocrats.wa.gov/fey/news" class="external external-link">https://housedemocrats.wa.gov/fey/news<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Adam Smith WA-09, Kim Schrier WA-08, Emily Randall WA-06, Marilyn Strickland WA-10</td><td><a href="https://www.narfe.org/wa/resources/links/congress-contact" class="external external-link">https://www.narfe.org/wa/resources/links/congress-contact<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Chris Gildon (R-25), Phil Fortunato (R-31), Yasmin Trudeau (D-27), Laurie Jinkins (Speaker), Drew Stokesbary (Minority Leader), Melanie Morgan (D-29)</td><td><a href="https://leg.wa.gov/legislators" class="external external-link">https://leg.wa.gov/legislators<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://leg.wa.gov/media/0pvgo5ic/2025-26-committee-assignment-telephone-directory.pdf" class="external external-link">https://leg.wa.gov/media/0pvgo5ic/2025-26-committee-assignment-telephone-directory.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Tom Pierson (Chamber CEO) appointed Acting Director of Economic Development for Pierce County (revolving door)</td><td><a href="https://www.linkedin.com/in/tom-pierson-a2808912" class="external external-link">https://www.linkedin.com/in/tom-pierson-a2808912<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td>Bill Sterud on Puyallup Tribal Council since 1978 (chairman rotates annually)</td><td><a href="https://www.puyalluptribe-nsn.gov/council_member/bill-sterud" class="external external-link">https://www.puyalluptribe-nsn.gov/council_member/bill-sterud<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr></tbody></table></div>
+<hr/>
+<h2 id="wrong-claims-proven-false--correct-fact--source">WRONG CLAIMS (proven false — correct fact + source)<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#wrong-claims-proven-false--correct-fact--source" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Investigation claim</th><th>Correct fact</th><th>Source</th></tr></thead><tbody><tr><td><strong>”Puyallup Tribe $162M+ assets”</strong> (task framing)</td><td>$162M is the <strong>1990 land-claims settlement</strong>, not current assets. Current tribal assets are not publicly stated at $162M.</td><td><a href="https://www.latimes.com/archives/la-xpm-1990-03-24-mn-680-story.html" class="external external-link">https://www.latimes.com/archives/la-xpm-1990-03-24-mn-680-story.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>”Tacoma Schools $1B+ levy”</strong> (task framing)</td><td>Tacoma’s Feb 2026 EP&amp;O levy funds ~$120M/yr (4-yr avg); the $650M figure was the <strong>2024 bond</strong>, not a $1B levy. No $1B+ Tacoma levy exists.</td><td><a href="https://www.tacomaschools.org/about/bond/february-10-2026-election" class="external external-link">https://www.tacomaschools.org/about/bond/february-10-2026-election<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.thenewstribune.com/news/local/education/article284320308.html" class="external external-link">https://www.thenewstribune.com/news/local/education/article284320308.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>JBLM “$12.1B economic impact”</strong> presented as Pierce County</td><td>The $12.1B is a <strong>combined Pierce + Thurston counties</strong> multiplier figure (UW Tacoma study). Pierce-only direct impact is ~$3.9B output / $3.6B labor income.</td><td><a href="https://www.ssmcp.org/wp-content/uploads/2023/10/REIA-2023-Pierce-Thurston-as-of-09272023.pdf" class="external external-link">https://www.ssmcp.org/wp-content/uploads/2023/10/REIA-2023-Pierce-Thurston-as-of-09272023.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.southsoundbiz.com/news/jblm-study-thurston-pierce-county/article_7adfd7de-2688-11ee-abc5-1b8e8d3f57a2.html" class="external external-link">https://www.southsoundbiz.com/news/jblm-study-thurston-pierce-county/article_7adfd7de-2688-11ee-abc5-1b8e8d3f57a2.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edge <code>jim-kastama → county-council (member)</code></strong></td><td>Kastama is on Puyallup City Council, not Pierce County Council.</td><td><a href="https://www.puyallupwa.gov/634/District-1---Jim-Kastama" class="external external-link">https://www.puyallupwa.gov/634/District-1---Jim-Kastama<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edge <code>anders-ibsen → county-council (mayor)</code></strong></td><td>Ibsen is Tacoma Mayor, not a Pierce County Council member.</td><td><a href="https://tacoma.gov/government/departments/mayor" class="external external-link">https://tacoma.gov/government/departments/mayor<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edge <code>twina-nobles → puyallup-schools (board_member)</code></strong></td><td>Nobles is on University Place School Board, not Puyallup.</td><td><a href="https://senatedemocrats.wa.gov/nobles/biography" class="external external-link">https://senatedemocrats.wa.gov/nobles/biography<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edge <code>catholic-archdiocese → vmfh (owns)</code></strong></td><td>VMFH is owned by CommonSpirit Health (Chicago); Archdiocese relationship is religious sponsorship, not ownership.</td><td><a href="https://www.vmfh.org/about-vmfh" class="external external-link">https://www.vmfh.org/about-vmfh<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edge <code>weyerhaeuser → green-diamond (timber)</code></strong></td><td>Separate, competing timber companies; no ownership relationship.</td><td><a href="https://investor.weyerhaeuser.com/2025-10-30-Weyerhaeuser-Provides-Update-on-Timberlands-Portfolio-Optimization-Actions" class="external external-link">https://investor.weyerhaeuser.com/2025-10-30-Weyerhaeuser-Provides-Update-on-Timberlands-Portfolio-Optimization-Actions<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edge <code>gtcf → dona-ponepinto (board)</code></strong></td><td>Ponepinto is NOT on GTCF board; the GTCF–United Way interlock is Nathe Lawver.</td><td><a href="https://www.uwpc.org/board-directors" class="external external-link">https://www.uwpc.org/board-directors<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.gtcf.org/blog/profile/nathe-lawver" class="external external-link">https://www.gtcf.org/blog/profile/nathe-lawver<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edges <code>keith-swank/mary-robnett/superior-court/district-court → county-council (appropriates)</code></strong></td><td>Direction reversed — the Council appropriates the budget TO the Sheriff/PA/courts.</td><td><a href="https://www.piercecountywa.gov/8875/2026-2027-Biennial-Budget-Development" class="external external-link">https://www.piercecountywa.gov/8875/2026-2027-Biennial-Budget-Development<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph edges <code>linda-farmer/marty-campbell → county-council (elected)</code></strong></td><td>Both are elected by county voters, not by the Council.</td><td><a href="https://www.piercecountywa.gov/8103/About-Auditor-Linda-Farmer" class="external external-link">https://www.piercecountywa.gov/8103/About-Auditor-Linda-Farmer<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph duplicate <code>puyallup-tribe → bill-sterud</code> AND <code>bill-sterud → puyallup-tribe</code></strong></td><td>Contradictory duplicate pair; Sterud leads the tribe (person→org direction correct).</td><td><a href="https://www.puyalluptribe-nsn.gov/council_member/bill-sterud" class="external external-link">https://www.puyalluptribe-nsn.gov/council_member/bill-sterud<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><strong>Graph lists Sterud as “Puyallup Tribal Chairman” (static)</strong></td><td>Chairman rotates annually; David Z. Bean has served as chairman (Sterud vice chairman) in recent years.</td><td><a href="https://www.puyalluptribe-nsn.gov/news/david-z-bean-elected-chairman-of-tribal-council-bill-sterud-elected-vice-chairman" class="external external-link">https://www.puyalluptribe-nsn.gov/news/david-z-bean-elected-chairman-of-tribal-council-bill-sterud-elected-vice-chairman<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr></tbody></table></div>
+<hr/>
+<h2 id="unverifiable--weak-claims">UNVERIFIABLE / WEAK CLAIMS<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#unverifiable--weak-claims" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Claim</th><th>What’s needed to verify</th></tr></thead><tbody><tr><td><strong>MultiCare “$357K via HHFPAC against Democratic candidates in 2022”</strong></td><td>The $357K figure is attributed to HHFPAC (WSHA PAC) spending, not MultiCare directly. MultiCare has no standalone PAC; its giving flows through WSHA/HHFPAC. Needs a PDC C4 report pull to confirm the exact $357K and the “against Democrats” characterization.</td></tr><tr><td><strong>Puyallup Tribe “largest lobbying spender in Pierce County”</strong></td><td>Federal lobbying is verifiable ($270K in 2024 per OpenSecrets), but “largest in Pierce County” needs a county-wide PDC lobbying comparison.</td></tr><tr><td><strong>”Chamber = shadow political party”</strong></td><td>The Chamber officially states it does not endorse candidates. The Candidate Academy, Voters Guide, and Candidates Forum are real, but “shadow party” is an analytical characterization, not a fact.</td></tr><tr><td><strong>”Growth machine” as a coordinated coalition</strong></td><td>Developers, realtors, banks, and Chamber share overlapping interests (documented via PDC donors), but no evidence proves a coordinated, self-aware “machine.”</td></tr><tr><td><strong>Bruce Dammeier “still embedded in Republican donor network”</strong></td><td>Analytical assessment; not directly sourceable.</td></tr><tr><td><strong>Swank’s birth location (Silver Spring, MD) / high school</strong></td><td>Not on campaign or official sites.</td></tr><tr><td><strong>Exact current committee chairs for county council committees</strong></td><td>Not verified for current session.</td></tr><tr><td><strong>MultiCare “largest private employer in Pierce County”</strong></td><td>Plausible and widely stated, but no single authoritative headcount for Pierce County specifically (30,000 is system-wide across 3 states).</td></tr></tbody></table></div>
+<hr/>
+<h2 id="entity-corrections">ENTITY CORRECTIONS<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#entity-corrections" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Node</th><th>Issue</th><th>Fix</th></tr></thead><tbody><tr><td><strong>port-tacoma</strong></td><td>Domained <code>economic</code>; it is a <strong>public municipal corporation</strong> (RCW Title 53) funded partly by property tax levy, with elected commissioners.</td><td>Re-domain to <strong>government</strong> (or dual-tag government/economic). Evidence/28 itself calls it public.</td></tr><tr><td><strong>puyallup-tribe</strong></td><td>Domained <code>institutional</code>; evidence/12 scores Economic 9, Institutional 9. Gaming is its biggest lever.</td><td>Defensible either way; recommend <strong>economic</strong> (or dual-tag) given Emerald Queen Casino is the primary revenue engine.</td></tr><tr><td><strong>chamber</strong></td><td>Domained <code>economic</code>; it’s a 501(c)(6) whose power is political (Candidate Academy, Voters Guide).</td><td>Defensible as economic, but its influence is political — recommend dual-tag or note in desc.</td></tr><tr><td><strong>multicare</strong></td><td>Domained <code>institutional</code>; evidence/12 scores Economic 9, Institutional 8.</td><td>Defensible; largest private employer. Keep institutional but note economic weight.</td></tr><tr><td><strong>chatham-am</strong></td><td>Domained <code>economic</code>; its power is <strong>media</strong> (owns McClatchy/News Tribune).</td><td>Re-domain to <strong>media</strong>.</td></tr><tr><td><strong>bill-sterud</strong></td><td>Labeled “Puyallup Tribal Chairman” (static); chairman rotates annually.</td><td>Update desc to note rotating chairmanship (Sterud ↔ Bean).</td></tr><tr><td><strong>steve-conway</strong></td><td>Listed as current D-29 Senator; he announced Jan 2026 he will not seek re-election (term ends Jan 2027).</td><td>Flag as “retiring — not seeking re-election 2026.”</td></tr><tr><td><strong>jt-wilcox</strong></td><td>Listed as Port Commissioner (correct) but evidence/01 notes his State House term ended Jan 2025.</td><td>Confirm he’s on Port Commission (verified), not a current state legislator.</td></tr><tr><td><strong>New nodes (Lawver, Strobel, Bernstein, Thompson, Sowell, Marzano, Keller, Ang, Smith, Schrier, Krishnadasan, Fey, Ferguson, CommonSpirit, Wellfound, WSHA, HHFPAC, Cheney Fdn, Bates, TAM, MOG, developers, Saltchuk, NWSA, SSMCP, PMBA, Tacoma Weekly)</strong></td><td>All are real entities/people.</td><td>Keep — verified real.</td></tr></tbody></table></div>
+<hr/>
+<h2 id="edge-corrections">EDGE CORRECTIONS<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#edge-corrections" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Wrong edges (fix):</strong></p>
+<ul>
+<li><code>jim-kastama → county-council</code> → change to <code>jim-kastama → puyallup-city-council</code> (or remove; he’s not a county council member).</li>
+<li><code>anders-ibsen → county-council</code> → change to <code>anders-ibsen → tacoma-city</code> (mayor).</li>
+<li><code>twina-nobles → puyallup-schools</code> → change to <code>twina-nobles → university-place-schools</code>.</li>
+<li><code>catholic-archdiocese → vmfh (owns)</code> → replace with <code>vmfh → commonspirit (owned_by)</code>.</li>
+<li><code>weyerhaeuser → green-diamond (timber)</code> → remove (separate companies).</li>
+<li><code>gtcf → dona-ponepinto (board)</code> → replace with <code>nathe-lawver → gtcf (board)</code> + <code>nathe-lawver → united-way (chair)</code>.</li>
+<li>4 reversed <code>appropriates</code> edges → reverse direction: <code>county-council → keith-swank/mary-robnett/superior-court/district-court (appropriates)</code>.</li>
+<li>2 <code>elected</code> edges (Farmer, Campbell) → relabel as <code>elected_by_voters</code>, not <code>→ county-council</code>.</li>
+<li>Duplicate <code>puyallup-tribe → bill-sterud</code> + <code>bill-sterud → puyallup-tribe</code> → keep only <code>bill-sterud → puyallup-tribe (chairman)</code>.</li>
+</ul>
+<p><strong>Filler/misleading edges (remove or relabel):</strong></p>
+<ul>
+<li><code>iheart/audacy/lotus/knkx → county-council (media)</code> — no documented relationship.</li>
+<li><code>columbia-bank → county-council (banking)</code> — generic.</li>
+<li><code>central-pierce-fire → county-council (consolidation)</code> — internal to fire districts.</li>
+<li><code>life-center → pierce-gop</code> and <code>life-center → county-council</code> — UNVERIFIED.</li>
+<li><code>catholic-archdiocese → county-council (influence)</code> — weak.</li>
+<li><code>healthy-bay → weyerhaeuser (holds_accountable)</code> — not directly cited.</li>
+<li>Generic <code>state_funding</code>/<code>federal_funding</code>/<code>levy_funding</code> edges to county-council — misleading; the real relationships are via appropriations committees and the districts’ own levies.</li>
+</ul>
+<p><strong>Missing edges (add — all evidence-supported):</strong></p>
+<ul>
+<li><code>master-builders → paul-herrera (donated)</code> — $2,400 (PDC).</li>
+<li><code>john-wiborg → gtcf (former_board)</code>, <code>john-wiborg → uw-tacoma</code>.</li>
+<li><code>dona-ponepinto → tacoma-art-museum (president)</code>.</li>
+<li><code>nathe-lawver → gtcf (board)</code> + <code>nathe-lawver → united-way (chair)</code> + <code>nathe-lawver → pclc (exec)</code>.</li>
+<li><code>andrew-strobel → tcc/ryan-mello/puyallup-tribe</code>; <code>lois-bernstein → tcc/multicare</code>; <code>jason-thompson → multicare/russell-invest</code>; <code>dale-sowell → multicare/green-diamond</code>.</li>
+<li><code>diann-puls → weyerhaeuser (former)</code> (the real Weyerhaeuser tie).</li>
+<li><code>multicare → wellfound (jv)</code> + <code>vmfh → wellfound (jv)</code>; <code>vmfh → commonspirit (owned_by)</code>.</li>
+<li><code>multicare → wsha (member)</code> + <code>vmfh → wsha (member)</code>; <code>wsha → hhfpac</code>.</li>
+<li><code>puyallup-tribe → amy-cruver/jani-hitchen/rosie-ayala (donated)</code> — PDC.</li>
+<li><code>ilwu23 → jani-hitchen (donated)</code> — PDC.</li>
+<li><code>tom-pierson → pierce-county-econ-dev (acting_director)</code> — revolving door.</li>
+<li><code>ryan-mello → gtcf (former_board)</code> — revolving door.</li>
+<li><code>jt-wilcox → pierce-gop (former)</code>.</li>
+<li><code>jblm → ssmcp</code> + <code>county-council → ssmcp</code>; <code>port-tacoma → nwsa</code>; <code>foss-family → saltchuk</code>.</li>
+<li><code>chamber → candidate-academy</code> (pipeline).</li>
+<li><strong>Money-source edges (the thesis’s step 1):</strong> <code>jblm ← federal-appropriations</code>, <code>multicare ← tax-exemption/medicare</code>, <code>puyallup-tribe ← sovereignty/gaming-compact</code>, <code>weyerhaeuser ← federal-land-grant</code>, <code>port-tacoma ← property-tax-levy</code>, <code>chamber ← tax-exempt-status</code>. These make the structural-capture loop visible.</li>
+</ul>
+<hr/>
+<h2 id="ranking-corrections">RANKING CORRECTIONS<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#ranking-corrections" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The evidence/12 qualitative ranking (Mello #1, Council #2, Tribe #3, MultiCare #4, JBLM #5, Port #6, Swank #7, Robnett #8) is <strong>defensible and survives</strong>. The graph’s <strong>computed composite</strong> (35% wdeg + 25% btw + 20% eig + 20% PageRank) does NOT survive as a power ranking:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Computed rank</th><th>Node</th><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>1</td><td>County Council</td><td>Over-ranked — inflated by filler edges (media, state_funding, appropriates).</td><td>Remove filler edges; Council should be #2.</td></tr><tr><td>3</td><td>Pierce Dems</td><td>Grossly over-ranked — party node collects all legislator <code>member</code> edges (structural artifact).</td><td>Cap party-node aggregation or remove legislator→party edges.</td></tr><tr><td>7</td><td>Pierce GOP</td><td>Same party-node artifact.</td><td>Same fix.</td></tr><tr><td>8</td><td>Superior Court</td><td>Over-ranked — inflated by reversed <code>appropriates</code> edges.</td><td>Fix edge direction.</td></tr><tr><td>11</td><td>Puyallup Tribe</td><td>Grossly under-ranked (#3 in evidence/12). Power is sovereignty/veto, not centrality.</td><td>Add veto-power dimension.</td></tr><tr><td>14</td><td>JBLM</td><td>Grossly under-ranked (#5). Only 3 edges.</td><td>Add veto/structural weight.</td></tr><tr><td>7</td><td>Swank</td><td>Under-ranked (#7 in evidence/12). Legal autonomy, not centrality.</td><td>Add veto/legal weight.</td></tr><tr><td>8</td><td>Robnett</td><td>Under-ranked (#8).</td><td>Add legal weight.</td></tr><tr><td>6</td><td>Chamber</td><td>Under-ranked (evidence/13 scores CRITICAL). Agenda/narrative power.</td><td>Add agenda/narrative dimension.</td></tr><tr><td>41</td><td>Kelly Chambers</td><td>Under-ranked (#10).</td><td>—</td></tr><tr><td>58</td><td>John Wiborg</td><td>Under-ranked (#11). Interlock economy underweighted.</td><td>Add interlock edges.</td></tr><tr><td>67</td><td>John McCarthy</td><td>Under-ranked (#12).</td><td>—</td></tr><tr><td>111/112</td><td>Erika Tucci / Lin Zhou</td><td>Zero score — isolated nodes (structural flaw).</td><td>Add employer edges (Cheney Fdn, Bates Tech).</td></tr></tbody></table></div>
+<p><strong>Bottom line:</strong> Do NOT use the raw composite as the final ranking. Use the evidence/12 qualitative matrix, and add a veto-power/structural dimension so the Tribe, JBLM, Sheriff, and Chamber rank where the evidence puts them.</p>
+<hr/>
+<h2 id="thesis-assessment">THESIS ASSESSMENT<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#thesis-assessment" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>The structural-capture thesis survives in its factual core but overreaches in its conclusion.</strong></p>
+<p><strong>What is CONFIRMED (all primary-sourced):</strong></p>
+<ul>
+<li>JBLM’s economic impact is federal appropriations/payroll (SSMCP REIA).</li>
+<li>MultiCare is a 501(c)(3) nonprofit funded heavily by Medicare/Medicaid and tax-exempt (Fitch, ProPublica 990).</li>
+<li>The Puyallup Tribe’s sovereignty and gaming rest on federal recognition + a state gaming compact (tribal site, WA Gambling Commission).</li>
+<li>Weyerhaeuser’s fortune originated in a federal land grant to the Northern Pacific, sold to Weyerhaeuser in 1900 (HistoryLink).</li>
+<li>The Port is a public municipal corporation funded partly by property tax levy (RCW 53).</li>
+<li>The Chamber is a tax-exempt 501(c)(6) (ProPublica 990).</li>
+</ul>
+<p><strong>What is OVERREACH (editorializing, not evidence):</strong></p>
+<ul>
+<li>“The private sector in Pierce County is largely a government-created rentier class” — this is a normative conclusion, not a finding. It ignores that MultiCare, Weyerhaeuser, and the Tribe also generate genuine private/economic value and employment.</li>
+<li>“The growth machine is a literal machine” — Logan &amp; Molotch’s growth-machine is a recognized academic lens, and the evidence (developers→Chamber→Council donor flows, Tideflats development, land-use approvals) is consistent with it. But the evidence shows <strong>overlapping interests</strong>, not a proven coordinated conspiracy. Frame it as “growth-coalition dynamics consistent with the growth-machine model,” not a proven machine.</li>
+<li>“Structural capture” as a feedback loop is a <strong>defensible analytical frame</strong> (government-created wealth → private power → policy influence → more wealth), but it should be labeled as an interpretation, not a demonstrated causal chain.</li>
+</ul>
+<p><strong>Defensible version:</strong> “Pierce County’s major economic institutions derive substantial power from government-granted privileges (appropriations, tax exemption, sovereignty, land grants, public levies), and these institutions in turn influence the government that grants those privileges. This creates a structural interdependence that warrants scrutiny.” — This survives. The stronger “rentier class / literal machine” framing does not.</p>
+<hr/>
+<h2 id="recommended-updates">RECOMMENDED UPDATES<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#recommended-updates" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Graph (<code>/tmp/pierce_graph_corrected.json</code>):</strong></p>
+<ol>
+<li>Fix the 12 wrong edges (Kastama, Ibsen, Nobles, Archdiocese-owns-VMFH, Weyerhaeuser-GreenDiamond, GTCF-Ponepinto, 4 reversed <code>appropriates</code>, 2 mislabeled <code>elected</code>, Sterud duplicate).</li>
+<li>Remove the 12 filler/misleading edges (media→council ×4, Columbia Bank→council, Central Pierce→council, Life Center ×2, Archdiocese→council, CHB→Weyerhaeuser, generic funding edges).</li>
+<li>Add the 30+ missing nodes and 25+ missing edges listed above (Lawver, Strobel, Bernstein, Thompson, Sowell, developers, Smith, Schrier, Krishnadasan, Fey, Ferguson, CommonSpirit, Wellfound, WSHA, HHFPAC, Cheney Fdn, Bates, TAM, MOG, Saltchuk, NWSA, SSMCP, PMBA, Tacoma Weekly).</li>
+<li>Add the <strong>money-source edges</strong> (federal_appropriations, tax_exemption, sovereignty, land_grant, levy) so the structural-capture loop is visible.</li>
+<li>Re-domain: port-tacoma → government; chatham-am → media; flag Tribe/Chamber/MultiCare as dual-domain.</li>
+<li>Add a <strong>veto-power dimension</strong> to the composite so Tribe, JBLM, Sheriff, Chamber rank correctly.</li>
+<li>Cap party-node aggregation (remove legislator→party <code>member</code> edges or weight them down).</li>
+</ol>
+<p><strong>Evidence files:</strong></p>
+<ul>
+<li><code>12-power-matrix.md</code>: Keep the qualitative ranking; add a note that the graph’s computed composite is a centrality measure, not a power measure.</li>
+<li><code>28-source-of-economic-power.md</code>: Soften the “rentier class / literal machine” language to “structural interdependence consistent with the growth-machine model.” Correct the JBLM figure to note it’s Pierce+Thurston combined.</li>
+<li><code>01-formal-power-structure-VERIFIED.md</code>: Update Conway to “retiring 2026”; note Puyallup chairman rotates (Sterud ↔ Bean).</li>
+<li><code>04-campaign-finance.md</code>: Verify the $357K HHFPAC figure against a PDC C4 report before citing it as MultiCare’s spend.</li>
+</ul>
+<p><strong>HTML (<code>11-power-network.html</code>):</strong></p>
+<ul>
+<li>Rebuild from the corrected graph.</li>
+<li>Use the evidence/12 qualitative ranking (with veto-power adjustment) for node sizing, not the raw composite.</li>
+<li>Add the “Follow the money” toggle to show the money-source edges (already planned).</li>
+</ul>
+<hr/>
+<h2 id="sources-primary-key">Sources (primary, key)<a role="anchor" aria-hidden tabindex="-1" data-no-popover href="#sources-primary-key" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Pierce County official: <a href="https://www.piercecountywa.gov/99/Pierce-County-Council" class="external external-link">https://www.piercecountywa.gov/99/Pierce-County-Council<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; /8875/2026-2027-Biennial-Budget-Development ; /8703/Biography ; /126/Meet-Your-Sheriff ; /3560/About-Mary-Robnett</li>
+<li>Wikipedia: <a href="https://en.wikipedia.org/wiki/2024_Pierce_County_Executive_election" class="external external-link">https://en.wikipedia.org/wiki/2024_Pierce_County_Executive_election<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; /Pierce_County_Council</li>
+<li>Ballotpedia: <a href="https://ballotpedia.org/Ryan_Mello_(Pierce_County_Executive,_Washington,_candidate_2024)" class="external external-link">https://ballotpedia.org/Ryan_Mello_(Pierce_County_Executive,_Washington,_candidate_2024)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; /Steve_Conway ; /Deborah_Krishnadasan</li>
+<li>Fitch: <a href="https://www.fitchratings.com/research/us-public-finance/fitch-affirms-multicare-healthcare-system-wa-at-a-outlook-stable-11-06-2026" class="external external-link">https://www.fitchratings.com/research/us-public-finance/fitch-affirms-multicare-healthcare-system-wa-at-a-outlook-stable-11-06-2026<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>SSMCP REIA: <a href="https://www.ssmcp.org/wp-content/uploads/2023/10/REIA-2023-Pierce-Thurston-as-of-09272023.pdf" class="external external-link">https://www.ssmcp.org/wp-content/uploads/2023/10/REIA-2023-Pierce-Thurston-as-of-09272023.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>City of Lakewood: <a href="https://cityoflakewood.us/jblm-economic-impact" class="external external-link">https://cityoflakewood.us/jblm-economic-impact<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>NWSA: <a href="https://www.nwseaportalliance.com/about-us/cargo-statistics" class="external external-link">https://www.nwseaportalliance.com/about-us/cargo-statistics<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>ProPublica 990s: <a href="https://projects.propublica.org/nonprofits/organizations/910434830" class="external external-link">https://projects.propublica.org/nonprofits/organizations/910434830<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Chamber) ; /911352172 (MultiCare)</li>
+<li>HistoryLink: <a href="https://www.historylink.org/file/5241" class="external external-link">https://www.historylink.org/file/5241<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Weyerhaeuser) ; /File/7969 (Puyallup settlement)</li>
+<li>Weyerhaeuser IR: <a href="https://investor.weyerhaeuser.com/2025-10-30-Weyerhaeuser-Provides-Update-on-Timberlands-Portfolio-Optimization-Actions" class="external external-link">https://investor.weyerhaeuser.com/2025-10-30-Weyerhaeuser-Provides-Update-on-Timberlands-Portfolio-Optimization-Actions<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>Puyallup Tribe: <a href="https://www.puyalluptribe-nsn.gov/council_member/bill-sterud" class="external external-link">https://www.puyalluptribe-nsn.gov/council_member/bill-sterud<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; /news/david-z-bean-elected-chairman-of-tribal-council-bill-sterud-elected-vice-chairman</li>
+<li>WA Legislature: <a href="https://leg.wa.gov/legislators" class="external external-link">https://leg.wa.gov/legislators<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://leg.wa.gov/media/0pvgo5ic/2025-26-committee-assignment-telephone-directory.pdf" class="external external-link">https://leg.wa.gov/media/0pvgo5ic/2025-26-committee-assignment-telephone-directory.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>Port of Tacoma: <a href="https://www.portoftacoma.com/commission" class="external external-link">https://www.portoftacoma.com/commission<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://app.leg.wa.gov/rcw/default.aspx?Cite=53" class="external external-link">https://app.leg.wa.gov/rcw/default.aspx?Cite=53<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>VMFH: <a href="https://www.vmfh.org/about-vmfh" class="external external-link">https://www.vmfh.org/about-vmfh<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>United Way/GTCF: <a href="https://www.uwpc.org/board-directors" class="external external-link">https://www.uwpc.org/board-directors<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> ; <a href="https://www.gtcf.org/blog/profile/nathe-lawver" class="external external-link">https://www.gtcf.org/blog/profile/nathe-lawver<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>Tacoma Schools: <a href="https://www.tacomaschools.org/about/bond/february-10-2026-election" class="external external-link">https://www.tacomaschools.org/about/bond/february-10-2026-election<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>Pierce Transit: <a href="https://piercetransit.org/wp-content/uploads/2025/2026-Adopted-Budget.pdf" class="external external-link">https://piercetransit.org/wp-content/uploads/2025/2026-Adopted-Budget.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar" data-sidebar-mode="fit"><div class="graph" data-quartz-plugin="graph" data-quartz-component="Graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc" data-quartz-plugin="table-of-contents" data-quartz-component="TableOfContents"><button type="button" class="toc-header" aria-controls="toc-238" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#red-team-report--inv-2026-002-pierce-county-leadership" data-for="red-team-report--inv-2026-002-pierce-county-leadership">RED-TEAM REPORT — INV-2026-002 (Pierce County Leadership)</a></li><li class="depth-1"><a href="#verdict-summary" data-for="verdict-summary">VERDICT SUMMARY</a></li><li class="depth-1"><a href="#confirmed-claims-survived-attack--each-with-primary-source" data-for="confirmed-claims-survived-attack--each-with-primary-source">CONFIRMED CLAIMS (survived attack — each with primary source)</a></li><li class="depth-1"><a href="#wrong-claims-proven-false--correct-fact--source" data-for="wrong-claims-proven-false--correct-fact--source">WRONG CLAIMS (proven false — correct fact + source)</a></li><li class="depth-1"><a href="#unverifiable--weak-claims" data-for="unverifiable--weak-claims">UNVERIFIABLE / WEAK CLAIMS</a></li><li class="depth-1"><a href="#entity-corrections" data-for="entity-corrections">ENTITY CORRECTIONS</a></li><li class="depth-1"><a href="#edge-corrections" data-for="edge-corrections">EDGE CORRECTIONS</a></li><li class="depth-1"><a href="#ranking-corrections" data-for="ranking-corrections">RANKING CORRECTIONS</a></li><li class="depth-1"><a href="#thesis-assessment" data-for="thesis-assessment">THESIS ASSESSMENT</a></li><li class="depth-1"><a href="#recommended-updates" data-for="recommended-updates">RECOMMENDED UPDATES</a></li><li class="depth-1"><a href="#sources-primary-key" data-for="sources-primary-key">Sources (primary, key)</a></li><li class="overflow-end"></li></ul></div><div class="backlinks" data-quartz-plugin="backlinks" data-quartz-component="Backlinks"><h3>Backlinks</h3><ul id="list-0" class="overflow"><li><a href="../../../../investigations/2608-pierce-leadership/pierce-record" class="internal">Pierce Record</a></li><li class="overflow-end"></li></ul></div></div><footer class data-quartz-plugin="footer" data-quartz-component="Footer"><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.1.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../../static/resource-after-b151bd49.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../../postscript-d0d7f98c.js" type="module" data-persist="true"></script></html>
