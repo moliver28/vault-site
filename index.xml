@@ -6,65 +6,65 @@
       <description>Last 10 notes on Michael&#039;s Knowledge Base</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Organization Contract</title>
+    <link>https://moliver28.github.io/vault-site/00-index/organization-contract</link>
+    <guid>https://moliver28.github.io/vault-site/00-index/organization-contract</guid>
+    <description><![CDATA[ Organization contract: one entity, one address This is the pattern for anything that agents, scripts, or plugins must find and act on, alongside the existing directory contract (same vault, sections per writer). ]]></description>
+    <pubDate>Mon, 16 Nov 2026 08:00:00 GMT</pubDate>
+  </item><item>
+    <title>Persona — Product and Design Leaders Building AI Features</title>
+    <link>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/persona-%E2%80%94-product-and-design-leaders-building-ai-features</link>
+    <guid>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/persona-%E2%80%94-product-and-design-leaders-building-ai-features</guid>
+    <description><![CDATA[ Secondary persona: Product and design leaders building AI features Who they are. ]]></description>
+    <pubDate>Mon, 16 Nov 2026 08:00:00 GMT</pubDate>
+  </item><item>
+    <title>Persona — Research Leads and Senior UX Researchers at B2B Software</title>
+    <link>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/persona-%E2%80%94-research-leads-and-senior-ux-researchers-at-b2b-software</link>
+    <guid>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/persona-%E2%80%94-research-leads-and-senior-ux-researchers-at-b2b-software</guid>
+    <description><![CDATA[ Primary persona: Research leads and senior UX researchers at B2B/enterprise software Who they are. ]]></description>
+    <pubDate>Mon, 16 Nov 2026 08:00:00 GMT</pubDate>
+  </item><item>
+    <title>Personas</title>
+    <link>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/</link>
+    <guid>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/</guid>
+    <description><![CDATA[ Personas (uxr-blog) Audience personas for the blog. ]]></description>
+    <pubDate>Mon, 16 Nov 2026 08:00:00 GMT</pubDate>
+  </item><item>
+    <title>Untitled</title>
+    <link>https://moliver28.github.io/vault-site/untitled.base</link>
+    <guid>https://moliver28.github.io/vault-site/untitled.base</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 16 Nov 2026 01:14:48 GMT</pubDate>
+  </item><item>
     <title>Cases</title>
     <link>https://moliver28.github.io/vault-site/investigations/cases.base</link>
     <guid>https://moliver28.github.io/vault-site/investigations/cases.base</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
+    <pubDate>Mon, 16 Nov 2026 01:14:48 GMT</pubDate>
   </item><item>
     <title>Untitled 1</title>
     <link>https://moliver28.github.io/vault-site/projects/agent-prompt-library/untitled-1.base</link>
     <guid>https://moliver28.github.io/vault-site/projects/agent-prompt-library/untitled-1.base</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
+    <pubDate>Mon, 16 Nov 2026 01:14:48 GMT</pubDate>
   </item><item>
     <title>Untitled 2</title>
     <link>https://moliver28.github.io/vault-site/projects/agent-prompt-library/untitled-2.base</link>
     <guid>https://moliver28.github.io/vault-site/projects/agent-prompt-library/untitled-2.base</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
+    <pubDate>Mon, 16 Nov 2026 01:14:48 GMT</pubDate>
   </item><item>
     <title>Untitled</title>
     <link>https://moliver28.github.io/vault-site/projects/agent-prompt-library/untitled.base</link>
     <guid>https://moliver28.github.io/vault-site/projects/agent-prompt-library/untitled.base</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
+    <pubDate>Mon, 16 Nov 2026 01:14:48 GMT</pubDate>
   </item><item>
-    <title>UXR Portfolio - Case Studies</title>
-    <link>https://moliver28.github.io/vault-site/projects/uxr-hiring/portfolio-db/uxr-portfolio---case-studies.base</link>
-    <guid>https://moliver28.github.io/vault-site/projects/uxr-hiring/portfolio-db/uxr-portfolio---case-studies.base</guid>
+    <title>Personas</title>
+    <link>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/index.base</link>
+    <guid>https://moliver28.github.io/vault-site/projects/uxr-blog/personas/index.base</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
-  </item><item>
-    <title>UXR Blog DB</title>
-    <link>https://moliver28.github.io/vault-site/projects/uxr-blog/blog-db/uxr-blog-db.base</link>
-    <guid>https://moliver28.github.io/vault-site/projects/uxr-blog/blog-db/uxr-blog-db.base</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
-  </item><item>
-    <title>Available Automations DB [Scripts - chains - workflows]</title>
-    <link>https://moliver28.github.io/vault-site/projects/automations/automations-db/available-automations-db-%5Bscripts---chains---workflows%5D.base</link>
-    <guid>https://moliver28.github.io/vault-site/projects/automations/automations-db/available-automations-db-%5Bscripts---chains---workflows%5D.base</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
-  </item><item>
-    <title>00-Index</title>
-    <link>https://moliver28.github.io/vault-site/00-index/</link>
-    <guid>https://moliver28.github.io/vault-site/00-index/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
-  </item><item>
-    <title>evidence</title>
-    <link>https://moliver28.github.io/vault-site/investigations/2608-lakewood-council/record/evidence/</link>
-    <guid>https://moliver28.github.io/vault-site/investigations/2608-lakewood-council/record/evidence/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
-  </item><item>
-    <title>record</title>
-    <link>https://moliver28.github.io/vault-site/investigations/2608-lakewood-council/record/</link>
-    <guid>https://moliver28.github.io/vault-site/investigations/2608-lakewood-council/record/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 16 Nov 2026 00:10:44 GMT</pubDate>
+    <pubDate>Mon, 16 Nov 2026 01:14:48 GMT</pubDate>
   </item>
     </channel>
   </rss>
