@@ -1,0 +1,336 @@
+{
+ "source": "vault-suggest-edits",
+ "note": "set approved:true (or pass --id) to apply",
+ "edits": [
+  {
+   "id": "E001",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "- **2026-08-16 Phase 1:** Case opened. All 7 council bios extracted. Initial employment conflicts identified ([[Paul-Bocchi|Bocchi]]/[[Pierce]] County, [[Patti-Belle|Belle]]/Kent). [[Lauricella]] bio incomplete.\n- **2026-08-16 Phase 2:** Employment and business conflicts confirmed. Bocchi (Pierce County Budget Analyst). Belle (Kent Communications Manager). [[Philip-Lindholm|Lindholm]] ([[Concord-Counsel|Concord Counsel]] CEO, real estate broker). [[Ryan-Pearson|Pearson]] (Pierce County engineer). [[Brandstetter]] (Bates Tech, multiple housing boards). [[Ellen-Talbo|Talbo]] (planning consultant background). Campaign finance: Lindholm self-funded. Business registry: Concord Counsel active.\n- **2026-08-16 Phase 3:** Social media footprint mapped. PDC F-1 filings found for ALL 7 via Socrata API. **CRITICAL: Lindholm F-1 lists NO Concord Counsel income** — only UW Medical + military benefits. Talbo works for City of Renton (Public Works Manager). Pearson Hawaii rental income. Bocchi PDC enforcement #150335.\n- **2026-08-16 Phase 3b:** 14 meeting minutes (Jan-Jul 2026) downloaded and analyzed. **ZERO recusals.** One abstention (Lindholm, Apr 6 on rental housing). Bocchi voted on [[Investigations/2608-pierce-leadership/record/profiles/pierce-transit|Pierce Transit]] interlocal without recusing. NER pipeline run.\n- **2026-08-16 Phase 3c:** Historical backfill — 42 additional minutes from 2010-2025. **ONE recusal in 16 years (Brandstetter, 2010).** Systemic finding: zero-recusal culture predates current council. NER pipeline confirmed.\n- **2026-08-16 Phase 4:** Campaign finance deep dive via Socrata API. Lindholm: $10,200+ claimed at the time; red-teamed 2026-11-12 to a $6,300 verified floor (Stonegate Assoc and Capital Ventures classifications unverified; MBA Pierce $1.2K, Landlord Solutions $1.2K, WA Realtors $500, Rémy Claude $1K, Wise $2.4K). Bocchi enforcement details (Conner Edwards, 800+ complaints). Belle mini-reporting (no data). NER pipeline run.\n- **2026-08-16 Narrative Gaps:** Subagent identified 3 notable angles: 1) Lindholm podcast-donor overlap ([[Terry-Wise|Terry Wise]] $2.4K = producer/donor; Landlord Solutions $1.2K = guest/donor), 2) \"Ethics over expediency\" hypocrisy, 3) Lauricella SS911 budget conflict. Interview targets identified (Christina Manetti, Jennifer Lamari, Briana Schumacher, Jason Whalen).\n- **2026-08-16 Phase 4 Supplemental:** Intensive follow-up search. 7 new evidence items:\n  - **E031:** Belle sworn in by Kent Mayor Dana Ralph (her boss) — powerful visual\n  - **E032:** Lindholm hosted Kent Mayor Ralph on podcast Episode 18 \"Cities Under Siege?\"\n  - **E033:** Lindholm was CEO of Terry Wise & Assoc before Concord Counsel — donor = former employer. Kickoff speech: \"I had zero experience when I started for Terry\"\n  - **E034:** Brandstetter sits on South Sound 911 board — where Lauricella is CTO\n  - **E035:** Lakewood budget funds South Sound 911 $49K+ — Lauricella's agency\n  - **E036:** Bocchi complainant Conner Edwards = 800+ complaints statewide (context)\n  - **E037:** 31-episode podcast guest list extracted — ready for donor cross-ref\n  - NER pipeline run on all new evidence. Committed and pushed.\n- **2026-08-16 Hypercritical Review:** Claim-by-claim report card across 8 findings. CRITICAL fix: \"ethics framework never required recusal\" was FALSE (RCW 42.23 exists, just never enforced). 4 claims downgraded (Lindholm F-1 $2.4K threshold unknown, Bocchi Pierce Transit = separate entity, podcast-donor = 2 overlaps not proof of pay-to-play, Pearson regs = city vs county different). Case file corrected. Saved to `evidence/hypercritical-review.md`.\n- **2026-08-17 Structural Gaps:** 8 structural forces documented explaining WHY the situation exists — part-time council paradox, enforcement vacuum, city manager trap, incompatible offices doctrine (1909), $2.4K F-1 threshold narrowing, peer comparison baseline (unknown at time), zero-incentive structure, beneficiary mapping. Saved to `evidence/how-the-world-works-gaps.md`.\n- **2026-08-17 Peer Comparison:** 5 peer WA code cities analyzed (Puyallup, Lacey, Richland, Shoreline, Lynnwood). VERDICT: Lakewood is a moderate outlier. Dual-gov rate CLEAR outlier (43% vs 14% as first reported; recounted 10/04 to 5 of 7 / 71% — see `evidence/dual-government-recount.md`). Recusal rate moderate outlier. Ethics enforcement entirely typical. Richland finding: mayor told councilmember \"abstentions not allowed.\" Saved to `evidence/peer-comparison-report.md`. E038, E039 added to evidence log.\n- **2026-08-17 Expanded Peer Comparison:** Tacoma, Federal Way, Kirkland. VERDICT: Lakewood's ethics vacuum is a CHOICE. Tacoma (charter, 222K) has Board of Ethics since 2006 — 9 complaints, violations found. Federal Way (code city!) has Ethics Board with subpoena power. Kirkland has ombudsman. Lakewood satisfies 0 of 8 benchmark components. Saved to `evidence/peer-comparison-expanded.md`. E043.\n- **2026-08-17 Podcast-Donor Cross-Reference:** 31 episodes x ~40 guests x PDC donor data. **6 donor-guest overlaps found (up from 2).** NEW: Steve O'Ban ($250), Jason Whalen ($200), Chris Van Vechten ($100), [[Investigations/2608-pierce-leadership/record/profiles/paul-herrera|Paul Herrera]] ($100). 3 of the 4 new overlaps on April 28, 2025 (Van Vechten May 15). Same-day filing cluster documented; pay-to-play remains unsupported (see hypercritical review). Saved to `evidence/podcast-donor-cross-ref.md`. E040.\n- **2026-08-17 Lauricella Budget Vote:** Found. He **seconded** the motion and voted aye on Ordinance 851 (2026 Carry Forward Budget). Budget includes a $49K background-examinations contract line with South Sound 911 (his employer; reimbursement flows SS911→city — direction corrected 10/04). No recusal, no disclosure. Saved to `evidence/lauricella-budget-vote.md`. E041.\n- **2026-08-17 Code of Ethics Found:** Lakewood HAS a local Code of Ethics (LMC Chapter 1.32). Council Rules Section 7.3 references it for COI questions. Section 10.1 permits abstention \"for stated conflict of interest or appearance of fairness.\" Despite having this framework, it has never been enforced in 16 years. This strengthens the story. Saved to `evidence/concord-ethics-code-findings.md`. E042.\n- **2026-08-17 Right-of-Reply Framework:** 20 specific, citeable questions drafted for all 7 members. Ready to send. Saved to `evidence/right-of-reply-framework.md`. E044 (pending).\n- **2026-10-04 L016 Resolved — Dual-Government Recount:** Written counting rule (paid position/elected office with another government: counties, cities, state agencies, school districts, special-purpose agencies; former/unpaid/private excluded). Lakewood: **5 of 7 (71%)** — Bocchi, Pearson (Pierce County), Belle (Kent), Talbo (Renton), Lauricella (SS911). Peers: 0–29% (median 14%). Strict variant both sides: 4 of 7 (57%) vs 14% max. E046 added; headline, peer tables, citation #26, voice summary swept; L017 opened (peer completeness). Saved to `evidence/dual-government-recount.md`.\n- **2026-10-04 Pre-publication corrections:** (1) Direction-of-payment fix — the $49K SS911 background-examinations line is contract revenue TO the city (SS911 reimburses; city performs exams), per the Adopted Budget contract-revenue projections and the carry-forward packet's dual revenue/expenditure columns; corrected in lauricella file, right-of-reply, voice summary. (2) Podcast cluster is 3 of 4 (Van Vechten May 15, not April 28); corrected in cross-ref, voice summary. (3) Opened L016 — dual-government counting rule + Pearson exclusion undocumented; 43% must not publish until the rule is pinned and peer counts re-audited. (→ resolved same day: see L016 / `evidence/dual-government-recount.md`.)",
+   "new_text": "- **2026-08-16 Phase 1:** Case opened. All 7 council bios extracted. Initial employment conflicts identified ([[Paul-Bocchi|Bocchi]]/[[Pierce]] County, [[Patti-Belle|Belle]]/Kent). [[Lauricella]] bio incomplete.\n- **2026-08-16 Phase 2:** Employment and business conflicts confirmed. Bocchi (Pierce County Budget Analyst). Belle (Kent Communications Manager). [[Philip-Lindholm|Lindholm]] ([[Concord-Counsel|Concord Counsel]] CEO, real estate broker). [[Ryan-Pearson|Pearson]] (Pierce County engineer). [[Brandstetter]] (Bates Tech, multiple housing boards). [[Ellen-Talbo|Talbo]] (planning consultant background). Campaign finance: Lindholm self-funded. Business registry: Concord Counsel active.\n- **2026-08-16 Phase 3:** Social media footprint mapped. PDC F-1 filings found for ALL 7 via Socrata API. **CRITICAL: Lindholm F-1 lists NO Concord Counsel income** — only UW Medical + military benefits. Talbo works for City of Renton (Public Works Manager). Pearson Hawaii rental income. Bocchi PDC enforcement #150335.\n- **2026-08-16 Phase 3b:** 14 meeting minutes (Jan-Jul 2026) downloaded and analyzed. **ZERO recusals.** One abstention (Lindholm, Apr 6 on rental housing). Bocchi voted on [[Investigations/2608-pierce-leadership/record/profiles/pierce-transit|Pierce Transit]] interlocal without recusing. NER pipeline run.\n- **2026-08-16 Phase 3c:** Historical backfill — 42 additional minutes from 2010-2025. **ONE recusal in 16 years (Brandstetter, 2010).** Systemic finding: zero-recusal culture predates current council. NER pipeline confirmed.\n- **2026-08-16 Phase 4:** Campaign finance deep dive via Socrata API. Lindholm: $10,200+ claimed at the time; red-teamed 2026-11-12 to a $6,300 verified floor (Stonegate Assoc and Capital Ventures classifications unverified; MBA Pierce $1.2K, Landlord Solutions $1.2K, WA Realtors $500, Rémy Claude $1K, Wise $2.4K). Bocchi enforcement details (Conner Edwards, 800+ complaints). Belle mini-reporting (no data). NER pipeline run.\n- **2026-08-16 Narrative Gaps:** Subagent identified 3 notable angles: 1) Lindholm podcast-donor overlap ([[Terry-Wise|Terry Wise]] $2.4K = producer/donor; Landlord Solutions $1.2K = guest/donor), 2) \"Ethics over expediency\" hypocrisy, 3) Lauricella SS911 budget conflict. Interview targets identified (Christina Manetti, Jennifer Lamari, Briana Schumacher, Jason Whalen).\n- **2026-08-16 Phase 4 Supplemental:** Intensive follow-up search. 7 new evidence items:\n  - **E031:** Belle sworn in by Kent Mayor Dana Ralph (her boss) — powerful visual\n  - **E032:** Lindholm hosted Kent Mayor Ralph on podcast Episode 18 \"Cities Under Siege?\"\n  - **E033:** Lindholm was CEO of Terry Wise & Assoc before Concord Counsel — donor = former employer. Kickoff speech: \"I had zero experience when I started for Terry\"\n  - **E034:** Brandstetter sits on South Sound 911 board — where Lauricella is CTO\n  - **E035:** Lakewood budget funds South Sound 911 $49K+ — Lauricella's agency\n  - **E036:** Bocchi complainant Conner Edwards = 800+ complaints statewide (context)\n  - **E037:** 31-episode podcast guest list extracted — ready for donor cross-ref\n  - NER pipeline run on all new evidence. Committed and pushed.\n- **2026-08-16 Hypercritical Review:** Claim-by-claim report card across 8 findings. CRITICAL fix: \"ethics framework never required recusal\" was FALSE (RCW 42.23 exists, just never enforced). 4 claims downgraded (Lindholm F-1 $2.4K threshold unknown, Bocchi Pierce Transit = separate entity, podcast-donor = 2 overlaps not proof of pay-to-play, Pearson regs = city vs county different). Case file corrected. Saved to `evidence/hypercritical-review.md`.\n- **2026-08-17 Structural Gaps:** 8 structural forces documented explaining WHY the situation exists — part-time council paradox, enforcement vacuum, city manager trap, incompatible offices doctrine (1909), $2.4K F-1 threshold narrowing, peer comparison baseline (unknown at time), zero-incentive structure, beneficiary mapping. Saved to `evidence/how-the-world-works-gaps.md`.\n- **2026-08-17 Peer Comparison:** 5 peer WA code cities analyzed (Puyallup, Lacey, Richland, Shoreline, Lynnwood). VERDICT: Lakewood is a moderate outlier. Dual-gov rate CLEAR outlier (43% vs 14% as first reported; recounted 10/04 to 5 of 7 / 71% — see `evidence/dual-government-recount.md`). Recusal rate moderate outlier. Ethics enforcement entirely typical. Richland finding: mayor told councilmember \"abstentions not allowed.\" Saved to `evidence/peer-comparison-report.md`. E038, E039 added to evidence log.\n- **2026-08-17 Expanded Peer Comparison:** Tacoma, Federal Way, Kirkland. VERDICT: Lakewood's ethics vacuum is a CHOICE. Tacoma (charter, 222K) has Board of Ethics since 2006 — 9 complaints, violations found. Federal Way (code city!) has Ethics Board with subpoena power. Kirkland has ombudsman. Lakewood satisfies 0 of 8 benchmark components. Saved to `evidence/peer-comparison-expanded.md`. E043.\n- **2026-08-17 Podcast-Donor Cross-Reference:** 31 episodes x ~40 guests x PDC donor data. **6 donor-guest overlaps found (up from 2).** NEW: Steve O'Ban ($250), Jason Whalen ($200), Chris Van Vechten ($100), [[Investigations/2608-pierce-leadership/record/profiles/paul-herrera|Paul Herrera]] ($100). 3 of the 4 new overlaps on April 28, 2025 (Van Vechten May 15). Same-day filing cluster documented; pay-to-play remains unsupported (see hypercritical review). Saved to `evidence/podcast-donor-cross-ref.md`. E040.\n- **2026-08-17 Lauricella Budget Vote:** Found. He **seconded** the motion and voted aye on Ordinance 851 (2026 Carry Forward Budget). Budget includes a $49K background-examinations contract line with South Sound 911 (his employer; reimbursement flows SS911→city — direction corrected 10/04). No recusal, no disclosure. Saved to `evidence/lauricella-budget-vote.md`. E041.\n- **2026-08-17 [[Lakewood-Ethics-Code|Code of Ethics]] Found:** Lakewood HAS a local Code of Ethics (LMC Chapter 1.32). Council Rules Section 7.3 references it for COI questions. Section 10.1 permits abstention \"for stated conflict of interest or appearance of fairness.\" Despite having this framework, it has never been enforced in 16 years. This strengthens the story. Saved to `evidence/concord-ethics-code-findings.md`. E042.\n- **2026-08-17 Right-of-Reply Framework:** 20 specific, citeable questions drafted for all 7 members. Ready to send. Saved to `evidence/right-of-reply-framework.md`. E044 (pending).\n- **2026-10-04 L016 Resolved — Dual-Government Recount:** Written counting rule (paid position/elected office with another government: counties, cities, state agencies, school districts, special-purpose agencies; former/unpaid/private excluded). Lakewood: **5 of 7 (71%)** — Bocchi, Pearson (Pierce County), Belle (Kent), Talbo (Renton), Lauricella (SS911). Peers: 0–29% (median 14%). Strict variant both sides: 4 of 7 (57%) vs 14% max. E046 added; headline, peer tables, citation #26, voice summary swept; L017 opened (peer completeness). Saved to `evidence/dual-government-recount.md`.\n- **2026-10-04 Pre-publication corrections:** (1) Direction-of-payment fix — the $49K SS911 background-examinations line is contract revenue TO the city (SS911 reimburses; city performs exams), per the Adopted Budget contract-revenue projections and the carry-forward packet's dual revenue/expenditure columns; corrected in lauricella file, right-of-reply, voice summary. (2) Podcast cluster is 3 of 4 (Van Vechten May 15, not April 28); corrected in cross-ref, voice summary. (3) Opened L016 — dual-government counting rule + Pearson exclusion undocumented; 43% must not publish until the rule is pinned and peer counts re-audited. (→ resolved same day: see L016 / `evidence/dual-government-recount.md`.)",
+   "description": "first mention of Code of Ethics → link to [[Lakewood-Ethics-Code]] (pair score 0.427)",
+   "kind": "inline-link",
+   "affinity": 0.427,
+   "approved": false
+  },
+  {
+   "id": "E002",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Terry-Wise-and-Associates]]",
+   "description": "no inline anchor found; append a See-also line linking [[Terry-Wise-and-Associates]] (pair score 0.365)",
+   "kind": "append-see-also",
+   "affinity": 0.365,
+   "approved": false
+  },
+  {
+   "id": "E003",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[LW-Wise-Links]]",
+   "description": "no inline anchor found; append a See-also line linking [[LW-Wise-Links]] (pair score 0.314)",
+   "kind": "append-see-also",
+   "affinity": 0.314,
+   "approved": false
+  },
+  {
+   "id": "E004",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[The-Informed-Citizen]]",
+   "description": "no inline anchor found; append a See-also line linking [[The-Informed-Citizen]] (pair score 0.302)",
+   "kind": "append-see-also",
+   "affinity": 0.302,
+   "approved": false
+  },
+  {
+   "id": "E005",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Terry-Wise]]",
+   "description": "no inline anchor found; append a See-also line linking [[Terry-Wise]] (pair score 0.291)",
+   "kind": "append-see-also",
+   "affinity": 0.291,
+   "approved": false
+  },
+  {
+   "id": "E006",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Terry-Wise-and-Associates]]",
+   "description": "no inline anchor found; append a See-also line linking [[Terry-Wise-and-Associates]] (pair score 0.289)",
+   "kind": "append-see-also",
+   "affinity": 0.289,
+   "approved": false
+  },
+  {
+   "id": "E007",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/LW-Verification-Ledger.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lakewood Brief]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lakewood Brief]] (pair score 0.289)",
+   "kind": "append-see-also",
+   "affinity": 0.289,
+   "approved": false
+  },
+  {
+   "id": "E008",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lakewood Record]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lakewood Record]] (pair score 0.286)",
+   "kind": "append-see-also",
+   "affinity": 0.286,
+   "approved": false
+  },
+  {
+   "id": "E009",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/LW-Wise-Links.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lakewood Brief]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lakewood Brief]] (pair score 0.284)",
+   "kind": "append-see-also",
+   "affinity": 0.284,
+   "approved": false
+  },
+  {
+   "id": "E010",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lochburn-Villa]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lochburn-Villa]] (pair score 0.282)",
+   "kind": "append-see-also",
+   "affinity": 0.282,
+   "approved": false
+  },
+  {
+   "id": "E011",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lochburn-Villa]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lochburn-Villa]] (pair score 0.282)",
+   "kind": "append-see-also",
+   "affinity": 0.282,
+   "approved": false
+  },
+  {
+   "id": "E012",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[LW-Anonymous-Retrieval-Log]]",
+   "description": "no inline anchor found; append a See-also line linking [[LW-Anonymous-Retrieval-Log]] (pair score 0.281)",
+   "kind": "append-see-also",
+   "affinity": 0.281,
+   "approved": false
+  },
+  {
+   "id": "E013",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Terry-Wise-and-Associates]]",
+   "description": "no inline anchor found; append a See-also line linking [[Terry-Wise-and-Associates]] (pair score 0.279)",
+   "kind": "append-see-also",
+   "affinity": 0.279,
+   "approved": false
+  },
+  {
+   "id": "E014",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/Entities/Flint-Hills-Real-Estate-Venture.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lake-Louise-Duplex]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lake-Louise-Duplex]] (pair score 0.271)",
+   "kind": "append-see-also",
+   "affinity": 0.271,
+   "approved": false
+  },
+  {
+   "id": "E015",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/LW-Verification-Ledger.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[LW-Wise-Links]]",
+   "description": "no inline anchor found; append a See-also line linking [[LW-Wise-Links]] (pair score 0.269)",
+   "kind": "append-see-also",
+   "affinity": 0.269,
+   "approved": false
+  },
+  {
+   "id": "E016",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/Entities/Lauricella.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Paul-Bocchi]]",
+   "description": "no inline anchor found; append a See-also line linking [[Paul-Bocchi]] (pair score 0.265)",
+   "kind": "append-see-also",
+   "affinity": 0.265,
+   "approved": false
+  },
+  {
+   "id": "E017",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/LW-Verification-Ledger.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[The-Informed-Citizen]]",
+   "description": "no inline anchor found; append a See-also line linking [[The-Informed-Citizen]] (pair score 0.264)",
+   "kind": "append-see-also",
+   "affinity": 0.264,
+   "approved": false
+  },
+  {
+   "id": "E018",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/LW-Wise-Links.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lakewood Findings]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lakewood Findings]] (pair score 0.263)",
+   "kind": "append-see-also",
+   "affinity": 0.263,
+   "approved": false
+  },
+  {
+   "id": "E019",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/Entities/Flint-Hills-Real-Estate-Venture.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Terry-Wise-and-Associates]]",
+   "description": "no inline anchor found; append a See-also line linking [[Terry-Wise-and-Associates]] (pair score 0.263)",
+   "kind": "append-see-also",
+   "affinity": 0.263,
+   "approved": false
+  },
+  {
+   "id": "E020",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/Entities/Lauricella.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Pierce-Transit]]",
+   "description": "no inline anchor found; append a See-also line linking [[Pierce-Transit]] (pair score 0.262)",
+   "kind": "append-see-also",
+   "affinity": 0.262,
+   "approved": false
+  },
+  {
+   "id": "E021",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[LW-Cascadian]]",
+   "description": "no inline anchor found; append a See-also line linking [[LW-Cascadian]] (pair score 0.253)",
+   "kind": "append-see-also",
+   "affinity": 0.253,
+   "approved": false
+  },
+  {
+   "id": "E022",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lakewood Timeline]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lakewood Timeline]] (pair score 0.252)",
+   "kind": "append-see-also",
+   "affinity": 0.252,
+   "approved": false
+  },
+  {
+   "id": "E023",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[The-Informed-Citizen]]",
+   "description": "no inline anchor found; append a See-also line linking [[The-Informed-Citizen]] (pair score 0.252)",
+   "kind": "append-see-also",
+   "affinity": 0.252,
+   "approved": false
+  },
+  {
+   "id": "E024",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[LW-Money-Flows]]",
+   "description": "no inline anchor found; append a See-also line linking [[LW-Money-Flows]] (pair score 0.247)",
+   "kind": "append-see-also",
+   "affinity": 0.247,
+   "approved": false
+  },
+  {
+   "id": "E025",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Lochburn-Villa]]",
+   "description": "no inline anchor found; append a See-also line linking [[Lochburn-Villa]] (pair score 0.245)",
+   "kind": "append-see-also",
+   "affinity": 0.245,
+   "approved": false
+  },
+  {
+   "id": "E026",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Wyoming-Housing-Holding-Company]]",
+   "description": "no inline anchor found; append a See-also line linking [[Wyoming-Housing-Holding-Company]] (pair score 0.243)",
+   "kind": "append-see-also",
+   "affinity": 0.243,
+   "approved": false
+  },
+  {
+   "id": "E027",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Flint-Hills-Real-Estate-Venture]]",
+   "description": "no inline anchor found; append a See-also line linking [[Flint-Hills-Real-Estate-Venture]] (pair score 0.243)",
+   "kind": "append-see-also",
+   "affinity": 0.243,
+   "approved": false
+  },
+  {
+   "id": "E028",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[LW-Open-Records-Queue]]",
+   "description": "no inline anchor found; append a See-also line linking [[LW-Open-Records-Queue]] (pair score 0.241)",
+   "kind": "append-see-also",
+   "affinity": 0.241,
+   "approved": false
+  },
+  {
+   "id": "E029",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Findings.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Pierce-Transit]]",
+   "description": "no inline anchor found; append a See-also line linking [[Pierce-Transit]] (pair score 0.234)",
+   "kind": "append-see-also",
+   "affinity": 0.234,
+   "approved": false
+  },
+  {
+   "id": "E030",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[The-Cascadian]]",
+   "description": "no inline anchor found; append a See-also line linking [[The-Cascadian]] (pair score 0.232)",
+   "kind": "append-see-also",
+   "affinity": 0.232,
+   "approved": false
+  },
+  {
+   "id": "E031",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/Entities/Lauricella.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Philip-Lindholm]]",
+   "description": "no inline anchor found; append a See-also line linking [[Philip-Lindholm]] (pair score 0.224)",
+   "kind": "append-see-also",
+   "affinity": 0.224,
+   "approved": false
+  },
+  {
+   "id": "E032",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/2608-lakewood-council.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[Walter-Neary]]",
+   "description": "no inline anchor found; append a See-also line linking [[Walter-Neary]] (pair score 0.223)",
+   "kind": "append-see-also",
+   "affinity": 0.223,
+   "approved": false
+  },
+  {
+   "id": "E033",
+   "file": "/Users/moliver/Documents/Obsidian Vault/Investigations/2608-lakewood-council/Lakewood Brief.md",
+   "anchor": "",
+   "new_text": "\n\n**Related on this case** — [[The-News-Tribune]]",
+   "description": "no inline anchor found; append a See-also line linking [[The-News-Tribune]] (pair score 0.22)",
+   "kind": "append-see-also",
+   "affinity": 0.22,
+   "approved": false
+  }
+ ]
+}
